@@ -1,0 +1,3187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>FabFunnel — Brand Moodboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* =================================================================
+   FabFunnel · Brand Moodboard
+   1920×1080 · 22 slides · Geist + Geist Mono
+   ================================================================= */
+
+:root {
+  --primary: #C3EB42;
+  --primary-deep: #A8D632;
+  --primary-dark: #8FB821;
+  --ink: #0D0D0D;
+  --ink-2: #1A1A1A;
+  --ink-3: #404040;
+  --ink-4: #6E6E6E;
+  --ink-5: #9A9A9A;
+  --grey-light: #F5F5F5;
+  --paper: #FFFFFF;
+  --warm: #F7F7F4;
+  --warm-2: #EDEDE5;
+  --success: #22CC5E;
+  --error: #FF3B30;
+  --warning: #FFC000;
+  --slate: #64748B;
+  --border: #E5E7EB;
+  --border-2: #D8D8D2;
+  --border-dark: #2A2A26;
+  --border-dark-2: #3A3A36;
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, "SF Mono", Menlo, monospace;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { background: #0a0a0a; }
+
+/* =========== SLIDE BASE =========== */
+deck-stage > section {
+  width: 1920px;
+  height: 1080px;
+  background: var(--warm);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  display: grid;
+  grid-template-rows: 84px 1fr 84px;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: -0.005em;
+}
+deck-stage > section.dark {
+  background: var(--ink);
+  color: var(--paper);
+}
+deck-stage > section.paper { background: var(--paper); }
+deck-stage > section.cream { background: var(--warm); }
+
+/* =========== MASTER · HEAD / FOOT =========== */
+.head, .foot {
+  padding: 0 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.head { padding-top: 32px; }
+.foot { padding-bottom: 32px; }
+.dark .head, .dark .foot { color: rgba(255,255,255,0.55); }
+
+.head-left, .foot-left, .head-right, .foot-right {
+  display: flex; align-items: center; gap: 16px;
+}
+.head-dot {
+  width: 6px; height: 6px; border-radius: 50%;
+  background: var(--primary); display: inline-block;
+}
+.foot-mark {
+  display: flex; align-items: center; gap: 10px;
+}
+.foot-mark .mk { width: 22px; height: 18px; }
+.foot-mark .wm {
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 15px;
+  letter-spacing: -0.015em;
+  text-transform: none;
+  color: inherit;
+}
+.foot-mark .wm em { font-style: normal; color: var(--primary-dark); font-weight: 500; }
+.dark .foot-mark .wm em { color: var(--primary); }
+.foot-tagline {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+.dark .foot-tagline { color: rgba(255,255,255,0.45); }
+.counter { font-variant-numeric: tabular-nums; }
+.counter strong { color: var(--ink); font-weight: 600; }
+.dark .counter strong { color: var(--paper); }
+
+/* =========== CONTENT SCAFFOLD =========== */
+.body { padding: 0 96px; display: flex; flex-direction: column; min-height: 0; }
+
+/* =========== LAYOUT 01 · COVER / END CARD =========== */
+.l1 .body {
+  align-items: center; justify-content: center; text-align: center;
+  gap: 32px;
+}
+.l1 .micro {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+.dark.l1 .micro { color: rgba(255,255,255,0.5); }
+.l1-hero {
+  display: flex; flex-direction: column; align-items: center; gap: 28px;
+}
+.l1-mark { width: 160px; height: auto; }
+.l1-title {
+  font-size: 96px;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+.l1-sub {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.dark.l1 .l1-sub { color: rgba(255,255,255,0.6); }
+.l1-tag {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--ink-3);
+  letter-spacing: -0.01em;
+  margin-top: 8px;
+}
+.dark.l1 .l1-tag { color: rgba(255,255,255,0.7); }
+
+/* =========== LAYOUT 02 · EDITORIAL =========== */
+.l2 .body {
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 96px;
+  align-content: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.l2-main { display: flex; flex-direction: column; gap: 32px; align-self: center; }
+.l2-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  display: flex; align-items: center; gap: 12px;
+}
+.dark .l2-eyebrow { color: var(--primary); }
+.l2-eyebrow::before {
+  content: ""; width: 32px; height: 1.5px; background: currentColor;
+}
+.l2-heading {
+  font-size: 88px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  max-width: 18ch;
+}
+.l2-body {
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: var(--ink-3);
+  max-width: 32ch;
+}
+.dark .l2-body { color: rgba(255,255,255,0.7); }
+.l2-tags {
+  display: flex; gap: 16px; flex-wrap: wrap; margin-top: 12px;
+}
+.l2-tag {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  padding: 8px 16px;
+  background: rgba(195,235,66,0.12);
+  color: var(--primary-dark);
+  border: 1px solid rgba(143,184,33,0.25);
+  border-radius: 4px;
+}
+.dark .l2-tag { color: var(--primary); background: rgba(195,235,66,0.08); border-color: rgba(195,235,66,0.2); }
+.l2-aside {
+  border-left: 1px solid var(--border-2);
+  padding-left: 40px;
+  display: flex; flex-direction: column; gap: 24px;
+  align-self: center;
+}
+.dark .l2-aside { border-left-color: var(--border-dark); }
+.l2-aside-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-bottom: 4px;
+}
+.dark .l2-aside-title { color: rgba(255,255,255,0.45); }
+.l2-aside-item {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--ink-2);
+  display: grid;
+  grid-template-columns: 32px 1fr;
+  gap: 12px;
+  letter-spacing: 0.02em;
+  padding: 6px 0;
+}
+.dark .l2-aside-item { color: rgba(255,255,255,0.8); }
+.l2-aside-item .num { color: var(--primary-dark); font-weight: 600; }
+.dark .l2-aside-item .num { color: var(--primary); }
+
+/* =========== LAYOUT 03 · SIDE-LABEL + CANVAS =========== */
+.l3 .body {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 64px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  min-height: 0;
+}
+.l3-label {
+  display: flex; flex-direction: column; gap: 32px;
+  padding-top: 8px;
+}
+.l3-section {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  font-weight: 500;
+}
+.dark .l3-section { color: var(--primary); }
+.l3-title {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+.l3-purpose {
+  font-size: 16px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  max-width: 26ch;
+}
+.dark .l3-purpose { color: rgba(255,255,255,0.65); }
+.l3-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-2);
+  line-height: 1.8;
+}
+.dark .l3-meta { color: rgba(255,255,255,0.4); border-top-color: var(--border-dark); }
+.l3-canvas {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  position: relative;
+}
+
+/* =========== LAYOUT 04 · GRID =========== */
+.l4 .body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  min-height: 0;
+}
+.l4-head { display: flex; align-items: end; justify-content: space-between; }
+.l4-head-left { display: flex; flex-direction: column; gap: 16px; }
+.l4-section {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+}
+.l4-title {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  line-height: 1;
+}
+.l4-head-right {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  text-align: right;
+  line-height: 1.8;
+  max-width: 32ch;
+}
+.l4-grid {
+  display: grid;
+  gap: 24px;
+  min-height: 0;
+}
+.l4-grid-2x2 { grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; }
+.l4-grid-1x3 { grid-template-columns: repeat(3, 1fr); }
+.l4-grid-2x3 { grid-template-columns: repeat(3, 1fr); grid-template-rows: 1fr 1fr; }
+
+/* =========== LAYOUT 05 · USE / AVOID =========== */
+.l5 .body {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 40px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  min-height: 0;
+}
+.l5-head { display: flex; align-items: end; justify-content: space-between; }
+.l5-title {
+  font-size: 52px;
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  line-height: 1;
+}
+.l5-section {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  margin-bottom: 12px;
+}
+.l5-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 0; min-height: 0; }
+.l5-col { padding: 0 40px; display: flex; flex-direction: column; gap: 24px; min-height: 0; }
+.l5-col:first-child { padding-left: 0; border-right: 1px solid var(--border-2); padding-right: 48px; }
+.l5-col:last-child { padding-right: 0; padding-left: 48px; }
+.dark .l5-col:first-child { border-right-color: var(--border-dark); }
+.l5-col-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-2);
+}
+.dark .l5-col-head { border-bottom-color: var(--border-dark); }
+.l5-col-label {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.l5-col-tick {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  font-weight: 700;
+}
+.l5-col.use .l5-col-label, .l5-col.use .l5-col-tick { color: var(--primary-dark); }
+.l5-col.avoid .l5-col-label, .l5-col.avoid .l5-col-tick { color: var(--ink-4); }
+.dark .l5-col.use .l5-col-label, .dark .l5-col.use .l5-col-tick { color: var(--primary); }
+.dark .l5-col.avoid .l5-col-label, .dark .l5-col.avoid .l5-col-tick { color: rgba(255,255,255,0.5); }
+.l5-tiles { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; flex: 1; min-height: 0; }
+.l5-tile {
+  border: 1px solid var(--border-2);
+  background: var(--paper);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex; flex-direction: column; gap: 12px;
+  min-height: 0;
+}
+.dark .l5-tile { background: var(--ink-2); border-color: var(--border-dark); }
+.l5-tile-img {
+  flex: 1;
+  background: var(--warm-2);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  min-height: 80px;
+  overflow: hidden;
+  position: relative;
+}
+.dark .l5-tile-img { background: #0a0a0a; }
+.l5-tile-label {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.l5-tile-why {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+}
+.dark .l5-tile-why { color: rgba(255,255,255,0.5); }
+
+/* nav-icon : sidebar mock element used on iconography slide */
+.nav-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  border-radius: 8px;
+  color: rgba(255,255,255,0.6);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  font-weight: 500;
+  transition: background var(--dur-fast, 160ms) ease-out;
+}
+.nav-icon svg { width: 16px; height: 16px; flex-shrink: 0; }
+.nav-icon span { white-space: nowrap; }
+.nav-icon.active {
+  background: var(--primary);
+  color: var(--ink);
+}
+
+/* Imagery samples (slide 17) */
+.img-sample {
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  overflow: hidden;
+}
+.img-sample[style*="#0D0D0D"] { border-color: var(--border-dark); }
+.img-sample-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  opacity: 0.7;
+}
+.img-sample-num {
+  background: var(--primary);
+  color: var(--ink);
+  padding: 3px 7px;
+  border-radius: 3px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+}
+.img-sample-mock {
+  flex: 1;
+  min-height: 0;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.img-sample-headline {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+.img-sample-headline em {
+  font-style: normal;
+  background: linear-gradient(180deg, transparent 60%, var(--primary) 60%);
+  padding: 0 2px;
+}
+.img-sample[style*="#0D0D0D"] .img-sample-headline em {
+  background: linear-gradient(180deg, transparent 60%, var(--primary) 60%);
+  color: var(--ink);
+}
+.img-sample-note {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  opacity: 0.65;
+}
+
+/* =========== COMMON ELEMENTS =========== */
+
+/* Foot mark — F-funnel inline SVG element substitute */
+.foot-mark svg { display: block; }
+
+/* tags row */
+.tag-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.tag {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  padding: 7px 14px;
+  border: 1px solid var(--border-2);
+  border-radius: 999px;
+  color: var(--ink-2);
+  background: var(--paper);
+}
+.dark .tag { background: rgba(255,255,255,0.04); border-color: var(--border-dark); color: rgba(255,255,255,0.85); }
+
+/* color swatches */
+.swatch-row { display: grid; grid-template-columns: repeat(5, 1fr); gap: 20px; flex: 1; min-height: 0; }
+.swatch {
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex; flex-direction: column;
+  min-height: 0;
+}
+.swatch-color { flex: 1; min-height: 200px; }
+.swatch-meta { padding: 20px; background: var(--paper); display: flex; flex-direction: column; gap: 6px; }
+.dark .swatch-meta { background: var(--ink-2); }
+.swatch-hex {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.swatch-name { font-size: 16px; font-weight: 600; }
+.swatch-role {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+.dark .swatch-role { color: rgba(255,255,255,0.5); }
+
+/* tiny swatch for supporting */
+.swatch-mini-row { display: flex; gap: 12px; }
+.swatch-mini {
+  display: flex; flex-direction: column; gap: 8px; flex: 1;
+}
+.swatch-mini-chip {
+  height: 56px;
+  border-radius: 6px;
+  border: 1px solid var(--border-2);
+}
+.swatch-mini-text {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.swatch-mini-hex {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-3);
+}
+.dark .swatch-mini-hex { color: rgba(255,255,255,0.65); }
+.swatch-mini-name {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* card */
+.card {
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 14px;
+}
+.dark .card { background: var(--ink-2); border-color: var(--border-dark); }
+.card-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+  font-weight: 600;
+}
+.dark .card-eyebrow { color: var(--primary); }
+.card-heading {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+.card-body {
+  font-size: 14px;
+  color: var(--ink-3);
+  line-height: 1.55;
+}
+.dark .card-body { color: rgba(255,255,255,0.7); }
+
+/* persona card */
+.persona-card {
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex; flex-direction: column; gap: 20px;
+}
+.persona-head { display: flex; align-items: center; gap: 16px; }
+.persona-icon {
+  width: 48px; height: 48px;
+  border-radius: 12px;
+  background: var(--warm-2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-2);
+}
+.persona-card.accent .persona-icon { background: var(--primary); color: var(--ink); }
+.persona-title {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+.persona-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+.persona-bullets { display: flex; flex-direction: column; gap: 10px; }
+.persona-bullet {
+  font-size: 16px;
+  color: var(--ink-2);
+  display: grid;
+  grid-template-columns: 14px 1fr;
+  gap: 12px;
+  align-items: baseline;
+  line-height: 1.4;
+}
+.persona-bullet::before {
+  content: "·";
+  color: var(--primary-dark);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* feature card */
+.feature-card {
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  padding: 36px 28px;
+  display: flex; flex-direction: column; gap: 20px;
+  flex: 1;
+}
+.feature-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: var(--warm-2);
+  display: flex; align-items: center; justify-content: center;
+}
+.feature-card.accent .feature-icon { background: var(--primary); }
+.feature-icon svg { width: 28px; height: 28px; stroke: var(--ink-2); }
+.feature-name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.feature-desc {
+  font-size: 15px;
+  color: var(--ink-3);
+  line-height: 1.55;
+  max-width: 32ch;
+}
+.feature-tag {
+  margin-top: auto;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+/* button samples */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 24px;
+  border-radius: 999px;
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: default;
+  border: 1px solid transparent;
+  letter-spacing: -0.005em;
+}
+.btn-primary { background: var(--primary); color: var(--ink); }
+.btn-primary-hover { background: var(--primary-deep); color: var(--ink); }
+.btn-secondary { background: transparent; color: var(--ink); border-color: var(--ink); }
+.btn-disabled { background: var(--grey-light); color: var(--ink-5); border-color: var(--border); }
+
+/* step indicators */
+.steps { display: flex; align-items: center; gap: 0; }
+.step {
+  display: flex; align-items: center; gap: 12px;
+}
+.step-num {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 14px;
+}
+.step.active .step-num { background: var(--primary); color: var(--ink); }
+.step.done .step-num { background: var(--ink); color: var(--paper); }
+.step.todo .step-num { background: transparent; color: var(--ink-3); border: 1px solid var(--border); }
+.step-label { font-size: 13px; color: var(--ink-3); }
+.step-line { width: 48px; height: 1px; background: var(--border-2); margin: 0 16px; }
+
+/* callout */
+.callout {
+  background: rgba(195,235,66,0.14);
+  border: 1px solid rgba(143,184,33,0.3);
+  border-radius: 10px;
+  padding: 20px 24px;
+  display: flex; gap: 16px; align-items: flex-start;
+}
+.callout-icon {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: var(--ink);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  flex-shrink: 0;
+}
+.callout-text {
+  font-size: 15px;
+  color: var(--ink-2);
+  line-height: 1.55;
+}
+
+/* mono scale label */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+/* spec line */
+.spec-line {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--ink-4);
+}
+.dark .spec-line { color: rgba(255,255,255,0.55); }
+
+/* screen ref card */
+.screen {
+  border: 1px solid var(--border-dark);
+  border-radius: 10px;
+  background: var(--ink-2);
+  overflow: hidden;
+  display: flex; flex-direction: column;
+}
+.screen-image {
+  aspect-ratio: 16/9;
+  background: var(--ink-2);
+  border-bottom: 1px solid var(--border-dark);
+  overflow: hidden;
+  position: relative;
+}
+.screen-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  display: block;
+}
+.screen-caption { padding: 18px 22px; display: flex; flex-direction: column; gap: 6px; }
+.screen-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.screen-name { font-size: 16px; font-weight: 600; color: var(--paper); letter-spacing: -0.01em; }
+.screen-note { font-size: 13px; color: rgba(255,255,255,0.6); line-height: 1.5; }
+
+/* ref brand tile */
+.ref-tile {
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 24px;
+  display: flex; flex-direction: column; gap: 16px;
+}
+.ref-tile-head {
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 14px;
+}
+.ref-tile-name {
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.ref-tile-cat {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-5);
+}
+.ref-tile-screenshot {
+  flex: 1;
+  background: var(--warm-2);
+  border-radius: 6px;
+  min-height: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.ref-tile-takeaway {
+  font-size: 14px;
+  color: var(--ink-2);
+  line-height: 1.5;
+  font-weight: 500;
+}
+.ref-tile-takeaway em {
+  color: var(--ink-4);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-style: normal;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* logo strip */
+.logo-strip { display: flex; flex-wrap: wrap; gap: 24px; align-items: center; }
+.logo-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 22px;
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.logo-pill-dot {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--warm-2);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--ink-3);
+}
+
+/* integrations columns */
+.intg-col {
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  padding: 32px;
+  display: flex; flex-direction: column; gap: 28px;
+}
+.intg-col-head { display: flex; align-items: baseline; justify-content: space-between; padding-bottom: 16px; border-bottom: 1px solid var(--border); }
+.intg-col-title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.intg-col-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--primary-dark);
+}
+.intg-list { display: flex; flex-direction: column; gap: 16px; }
+.intg-row { display: flex; align-items: center; gap: 16px; padding: 12px 0; border-bottom: 1px dashed var(--border); }
+.intg-row:last-child { border-bottom: none; }
+.intg-logo {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: var(--warm-2);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--ink-2);
+  flex-shrink: 0;
+}
+.intg-name { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; }
+.intg-meta { font-family: var(--font-mono); font-size: 11px; color: var(--ink-4); letter-spacing: 0.06em; margin-left: auto; }
+
+/* utilities */
+.flex-row { display: flex; gap: 16px; align-items: center; }
+.flex-col { display: flex; flex-direction: column; gap: 16px; }
+.full { width: 100%; height: 100%; }
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+.dark .mono-tag { color: rgba(255,255,255,0.5); }
+
+/* type specimen */
+.specimen-aa {
+  font-size: 320px;
+  font-weight: 800;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+}
+.specimen-glyphs {
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  color: var(--ink-3);
+  font-feature-settings: "ss01";
+  line-height: 1.2;
+}
+.weight-ladder { display: flex; flex-direction: column; gap: 10px; }
+.weight-ladder-row {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 24px;
+  align-items: baseline;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+.weight-ladder-row:last-child { border-bottom: none; }
+.weight-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--ink-4);
+  text-transform: uppercase;
+}
+.weight-sample {
+  font-size: 28px;
+  letter-spacing: -0.015em;
+}
+
+/* type scale composition */
+.scale-row {
+  display: grid;
+  grid-template-columns: 1fr 160px;
+  gap: 32px;
+  align-items: baseline;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--border);
+}
+.scale-row:last-child { border-bottom: none; }
+.scale-sample-h1 { font-size: 48px; font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; }
+.scale-sample-h2 { font-size: 32px; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2; }
+.scale-sample-h3 { font-size: 22px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.3; }
+.scale-sample-bl { font-size: 18px; font-weight: 400; line-height: 1.5; }
+.scale-sample-br { font-size: 15px; font-weight: 400; line-height: 1.55; color: var(--ink-3); }
+.scale-sample-bs { font-size: 12px; font-weight: 400; line-height: 1.5; color: var(--ink-4); }
+.scale-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  letter-spacing: 0.04em;
+  text-align: right;
+  line-height: 1.6;
+}
+
+/* spacing ruler */
+.ruler { display: flex; align-items: end; gap: 16px; padding: 24px 0; }
+.ruler-block {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.ruler-bar {
+  background: var(--primary);
+  width: 48px;
+  border-radius: 2px;
+}
+.ruler-bar.muted { background: var(--warm-2); border: 1px solid var(--border); }
+.ruler-label {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--ink-3);
+  letter-spacing: 0.05em;
+}
+
+/* radius examples */
+.radius-row { display: flex; gap: 24px; }
+.radius-tile { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.radius-box {
+  width: 84px;
+  height: 84px;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+}
+.radius-meta {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--ink-4);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.radius-meta strong { color: var(--ink-2); font-weight: 600; display: block; font-size: 13px; }
+
+/* icon grid */
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 12px;
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 12px;
+  padding: 24px;
+}
+.icon-cell {
+  aspect-ratio: 1;
+  background: var(--warm-2);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-2);
+}
+.icon-cell svg { width: 28px; height: 28px; }
+
+/* anti icons */
+.anti-row { display: flex; gap: 16px; }
+.anti-tile {
+  flex: 1;
+  border: 1px solid var(--border-2);
+  border-radius: 8px;
+  padding: 18px;
+  background: var(--paper);
+  display: flex; flex-direction: column; gap: 10px; align-items: center;
+}
+.anti-tile-glyph {
+  width: 56px; height: 56px;
+  border-radius: 8px;
+  background: var(--warm-2);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--ink-4);
+  font-family: var(--font-mono);
+  font-size: 22px;
+}
+.anti-tile-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+}
+
+/* motion frames */
+.motion-frames {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  height: 100%;
+}
+.motion-frame {
+  background: var(--ink-2);
+  border: 1px solid var(--border-dark);
+  border-radius: 12px;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  position: relative;
+  overflow: hidden;
+}
+.motion-frame-num {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+}
+.motion-frame-title {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+}
+.motion-frame-curve {
+  height: 80px;
+  position: relative;
+  margin: 16px 0;
+}
+.motion-frame-spec {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.04em;
+  line-height: 1.6;
+  margin-top: auto;
+}
+
+/* surface stack */
+.surface-stack {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  height: 100%;
+}
+.surface-demo {
+  border-radius: 12px;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 16px;
+  position: relative;
+}
+.surface-flat {
+  background: var(--warm-2);
+}
+.surface-layered {
+  background: var(--warm-2);
+}
+.surface-layered .surface-card {
+  background: var(--paper);
+  border: 1px solid var(--border-2);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 16px 32px -16px rgba(0,0,0,0.12);
+}
+.surface-flat .surface-card {
+  background: var(--paper);
+  border-radius: 10px;
+  padding: 20px;
+}
+.surface-card-title { font-size: 16px; font-weight: 600; }
+.surface-card-text { font-size: 13px; color: var(--ink-3); line-height: 1.5; }
+.surface-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-4);
+  position: absolute;
+  top: 14px;
+  right: 14px;
+}
+
+/* hashtag callouts (slide 3 / 21) */
+.hash-row { display: flex; gap: 20px; flex-wrap: wrap; }
+.hash {
+  font-family: var(--font-mono);
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  padding: 10px 20px;
+  background: rgba(195,235,66,0.1);
+  color: var(--primary);
+  border: 1px solid rgba(195,235,66,0.25);
+  border-radius: 999px;
+}
+
+/* misc */
+.dot { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--primary); }
+.divider-soft { height: 1px; background: var(--border-2); }
+.dark .divider-soft { background: var(--border-dark); }
+
+/* deck-stage adjustments */
+deck-stage { background: #0a0a0a; }
+
+/* print */
+@media print {
+  deck-stage > section { page-break-after: always; }
+}
+</style>
+
+<script type="application/json" id="speaker-notes">[]</script>
+</head>
+
+<body>
+
+<!-- Reusable inline SVGs -->
+<svg style="display:none" aria-hidden="true">
+  <symbol id="ff-mark" viewBox="0 0 128 102">
+    <path d="M127.882 4.84577C127.882 6.0199 127.464 7.09453 126.768 7.93035L104.23 34.9453C104.151 35.0547 104.121 35.0746 104.111 35.0945C103.225 36.1294 101.902 36.796 100.419 36.796H44.8571L20.6183 8.5373L23.7625 4.85573L24.1307 4.4378C26.5088 1.62188 30.0014 0 33.6829 0H123.026C125.713 0 127.882 2.16916 127.882 4.85573Z" fill="#0D0D0D"/>
+    <path d="M49.4939 98.6169L47.683 100.746C47.0063 101.542 46.0013 102 44.9566 102H8.66802C5.99141 102 3.8123 99.8309 3.8123 97.1542C3.8123 95.9801 4.23021 94.9054 4.91678 94.0696L25.2352 70.388L49.4839 98.6069Z" fill="#C3EB42"/>
+    <path d="M83.663 58.8557L49.4939 98.6169L3.4939 45.0647C2.68793 44.1094 2.59837 43.9901 2.51876 43.8707C0.429211 40.9552 2.48892 36.786 6.23022 36.796H44.867L63.7327 58.7264C68.9964 64.8458 78.3794 64.8756 83.663 58.8557Z" fill="#A8D632"/>
+    <path d="M44.8571 36.786H6.22025C2.48891 36.786 0.429215 40.9652 2.50882 43.8707C-0.914068 39.612 -0.834461 33.5025 2.74763 29.3333L8.88693 22.1692L20.6183 8.52737L44.8571 36.786Z" fill="#C3EB42"/>
+    <path d="M87.9018 52.1492C87.9018 53.3234 87.4839 54.398 86.7874 55.2338L83.7824 58.7363C78.3496 64.8855 68.9665 64.8557 63.7128 58.7363L53.8819 47.3035H83.0362C85.7228 47.3035 87.8919 49.4726 87.8919 52.1592Z" fill="#0D0D0D"/>
+    <path d="M87.9018 52.1492C87.9018 53.3234 87.4839 54.398 86.7874 55.2338L83.7824 58.7363C78.3496 64.8855 68.9665 64.8557 63.7128 58.7363L53.8819 47.3035H83.0362C85.7228 47.3035 87.8919 49.4726 87.8919 52.1592Z" fill="#C3EB42"/>
+  </symbol>
+  <symbol id="ff-mark-dark" viewBox="0 0 128 102">
+    <path d="M127.882 4.84577C127.882 6.0199 127.464 7.09453 126.768 7.93035L104.23 34.9453C104.151 35.0547 104.121 35.0746 104.111 35.0945C103.225 36.1294 101.902 36.796 100.419 36.796H44.8571L20.6183 8.5373L23.7625 4.85573L24.1307 4.4378C26.5088 1.62188 30.0014 0 33.6829 0H123.026C125.713 0 127.882 2.16916 127.882 4.85573Z" fill="#FFFFFF"/>
+    <path d="M49.4939 98.6169L47.683 100.746C47.0063 101.542 46.0013 102 44.9566 102H8.66802C5.99141 102 3.8123 99.8309 3.8123 97.1542C3.8123 95.9801 4.23021 94.9054 4.91678 94.0696L25.2352 70.388L49.4839 98.6069Z" fill="#C3EB42"/>
+    <path d="M83.663 58.8557L49.4939 98.6169L3.4939 45.0647C2.68793 44.1094 2.59837 43.9901 2.51876 43.8707C0.429211 40.9552 2.48892 36.786 6.23022 36.796H44.867L63.7327 58.7264C68.9964 64.8458 78.3794 64.8756 83.663 58.8557Z" fill="#A8D632"/>
+    <path d="M44.8571 36.786H6.22025C2.48891 36.786 0.429215 40.9652 2.50882 43.8707C-0.914068 39.612 -0.834461 33.5025 2.74763 29.3333L8.88693 22.1692L20.6183 8.52737L44.8571 36.786Z" fill="#C3EB42"/>
+    <path d="M87.9018 52.1492C87.9018 53.3234 87.4839 54.398 86.7874 55.2338L83.7824 58.7363C78.3496 64.8855 68.9665 64.8557 63.7128 58.7363L53.8819 47.3035H83.0362C85.7228 47.3035 87.8919 49.4726 87.8919 52.1592Z" fill="#FFFFFF"/>
+    <path d="M87.9018 52.1492C87.9018 53.3234 87.4839 54.398 86.7874 55.2338L83.7824 58.7363C78.3496 64.8855 68.9665 64.8557 63.7128 58.7363L53.8819 47.3035H83.0362C85.7228 47.3035 87.8919 49.4726 87.8919 52.1592Z" fill="#C3EB42"/>
+  </symbol>
+</svg>
+
+<deck-stage>
+
+<!-- ================================================================= -->
+<!-- SLIDE 01 · COVER -->
+<!-- ================================================================= -->
+<section class="dark l1" data-screen-label="01 Cover">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 01 · OPEN</div>
+    <div class="head-right counter">01 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="micro">BRAND MOODBOARD · v1.0 · 19 MAY 2026</div>
+    <div class="l1-hero">
+      <svg class="l1-mark" viewBox="0 0 128 102"><use href="#ff-mark-dark"/></svg>
+      <h1 class="l1-title">FabFunnel<br>Brand Moodboard</h1>
+      <div class="l1-sub">Visual reference · Phase 2</div>
+    </div>
+    <div class="l1-tag">Create, Launch, Scale and Automate. Win Everywhere.</div>
+  </div>
+  <div class="foot">
+    <div class="foot-left mono-tag">Internal · do not distribute</div>
+    <div class="foot-right mono-tag">Owner · Aabhas</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 02 · HOW TO USE -->
+<!-- ================================================================= -->
+<section class="l2" data-screen-label="02 How to use">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 01 · OPEN</div>
+    <div class="head-right counter">02 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l2-main">
+      <div class="l2-eyebrow">How to read this deck</div>
+      <h2 class="l2-heading">Reference,<br>not a rulebook.</h2>
+      <p class="l2-body">Each slide answers <em style="font-style:normal;color:var(--ink);font-weight:500">what should this feel like</em>, not what hex code to use. The master brand guidelines are the source of truth. This deck shows the system in motion.</p>
+      <p class="l2-body">Anti-references at the end carry the same weight as the positive direction. They are the guardrails, not afterthoughts.</p>
+    </div>
+    <div class="l2-aside">
+      <div class="l2-aside-title">Structure · 6 sections</div>
+      <div class="l2-aside-item"><span class="num">01</span><span>Open · 1–3</span></div>
+      <div class="l2-aside-item"><span class="num">02</span><span>Foundations · 4–7</span></div>
+      <div class="l2-aside-item"><span class="num">03</span><span>System · 8–10</span></div>
+      <div class="l2-aside-item"><span class="num">04</span><span>Audience · 11–15</span></div>
+      <div class="l2-aside-item"><span class="num">05</span><span>Aesthetic · 16–22</span></div>
+      <div class="l2-aside-item"><span class="num">06</span><span>Close · 23–24</span></div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">Create · Launch · Scale · Automate · Win Everywhere</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 03 · BRAND ESSENCE -->
+<!-- ================================================================= -->
+<section class="dark l2" data-screen-label="03 Brand essence">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 01 · OPEN</div>
+    <div class="head-right counter">03 / <strong>24</strong></div>
+  </div>
+  <div class="body" style="grid-template-columns: 1fr 280px;">
+    <div class="l2-main">
+      <div class="l2-eyebrow">Brand essence</div>
+      <h2 class="l2-heading" style="font-size: 96px; max-width: 14ch; line-height: 0.95;">Create.<br>Launch.<br>Scale.<br>Automate.<br><span style="color:var(--primary)">Win Everywhere.</span></h2>
+      <p class="l2-body" style="font-size:20px;max-width:42ch;">AI-powered platform for creative generation, bulk ad launches, and automation. Built for media buyers, affiliates, and ecom brands who run the cycle daily.</p>
+      <div class="hash-row" style="margin-top:8px;">
+        <span class="hash">#Performance</span>
+        <span class="hash">#Automation</span>
+        <span class="hash">#Growth</span>
+        <span class="hash">#Insights</span>
+      </div>
+    </div>
+    <div class="l2-aside" style="align-items:flex-start;">
+      <div class="l2-aside-title">Voice</div>
+      <div style="font-family:var(--font-mono);font-size:13px;line-height:1.8;color:rgba(255,255,255,0.7);letter-spacing:0.02em;">
+        Confident.<br>Builder-energy.<br>Dev-tool precision.<br><span style="color:rgba(255,255,255,0.35);">Never hype-marketing.</span>
+      </div>
+      <div class="divider-soft" style="margin:24px 0;"></div>
+      <div class="l2-aside-title">Subject</div>
+      <div style="font-family:var(--font-mono);font-size:13px;line-height:1.8;color:rgba(255,255,255,0.7);letter-spacing:0.02em;">
+        You-implied.<br>We-light.<br>Plural-noun + verb.<br><span style="color:rgba(255,255,255,0.35);">No fluff.</span>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark-dark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline" style="color:var(--primary);">OS for paid ads</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 04 · COLOR PRIMARY -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="04 Color primary">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 02 · FOUNDATIONS</div>
+    <div class="head-right counter">04 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">02 · Foundations</div>
+      <h2 class="l3-title">Primary palette.</h2>
+      <p class="l3-purpose">Five base tones. Primary green is a spotlight, never a wash. Everything else is structure.</p>
+      <div class="l3-meta">
+        Rule · primary as accent<br>
+        Rule · ink dominates display<br>
+        Rule · paper carries detail
+      </div>
+    </div>
+    <div class="l3-canvas">
+      <div class="swatch-row">
+        <div class="swatch" style="border-color:var(--primary-deep);">
+          <div class="swatch-color" style="background: var(--primary);"></div>
+          <div class="swatch-meta">
+            <div class="swatch-hex">#C3EB42</div>
+            <div class="swatch-name">Primary Green</div>
+            <div class="swatch-role">Hero accent · CTAs · active</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #0D0D0D;"></div>
+          <div class="swatch-meta">
+            <div class="swatch-hex">#0D0D0D</div>
+            <div class="swatch-name">Deep Black</div>
+            <div class="swatch-role">Dark surfaces · sidebar</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #1A1A1A;"></div>
+          <div class="swatch-meta">
+            <div class="swatch-hex">#1A1A1A</div>
+            <div class="swatch-name">Dark Gray</div>
+            <div class="swatch-role">Elevated · secondary</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #F5F5F5; border-right: 1px solid var(--border);"></div>
+          <div class="swatch-meta">
+            <div class="swatch-hex">#F5F5F5</div>
+            <div class="swatch-name">Light Gray</div>
+            <div class="swatch-role">Light-mode base</div>
+          </div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background: #FFFFFF; border-right: 1px solid var(--border);"></div>
+          <div class="swatch-meta">
+            <div class="swatch-hex">#FFFFFF</div>
+            <div class="swatch-name">White</div>
+            <div class="swatch-role">Canvas · max contrast</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">02 · Color</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 05 · COLOR SUPPORTING + USAGE -->
+<!-- ================================================================= -->
+<section class="l5" data-screen-label="05 Color supporting">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 02 · FOUNDATIONS</div>
+    <div class="head-right counter">05 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l5-head">
+      <div>
+        <div class="l5-section">02 · Foundations · Color</div>
+        <h2 class="l5-title">Supporting palette + usage rules.</h2>
+      </div>
+      <div class="mono-tag" style="text-align:right;line-height:1.8;">Semantic only · never decorative<br>5 swatches · 5 jobs</div>
+    </div>
+    <div class="l5-cols">
+      <div class="l5-col use">
+        <div class="l5-col-head">
+          <span class="l5-col-label">USE</span>
+          <span class="l5-col-tick">✓</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+          <div class="swatch-mini">
+            <div class="swatch-mini-chip" style="background:#22CC5E;"></div>
+            <div class="swatch-mini-text">
+              <div class="swatch-mini-name">Success Green</div>
+              <div class="swatch-mini-hex">#22CC5E · positive deltas</div>
+            </div>
+          </div>
+          <div class="swatch-mini">
+            <div class="swatch-mini-chip" style="background:#FF3B30;"></div>
+            <div class="swatch-mini-text">
+              <div class="swatch-mini-name">Error Red</div>
+              <div class="swatch-mini-hex">#FF3B30 · destructive</div>
+            </div>
+          </div>
+          <div class="swatch-mini">
+            <div class="swatch-mini-chip" style="background:#FFC000;"></div>
+            <div class="swatch-mini-text">
+              <div class="swatch-mini-name">Warning Yellow</div>
+              <div class="swatch-mini-hex">#FFC000 · soft alerts</div>
+            </div>
+          </div>
+          <div class="swatch-mini">
+            <div class="swatch-mini-chip" style="background:#64748B;"></div>
+            <div class="swatch-mini-text">
+              <div class="swatch-mini-name">Slate Gray</div>
+              <div class="swatch-mini-hex">#64748B · inactive</div>
+            </div>
+          </div>
+          <div class="swatch-mini" style="grid-column: span 2;">
+            <div class="swatch-mini-chip" style="background:#E5E7EB;"></div>
+            <div class="swatch-mini-text">
+              <div class="swatch-mini-name">Border Gray</div>
+              <div class="swatch-mini-hex">#E5E7EB · dividers · 1px lines</div>
+            </div>
+          </div>
+        </div>
+        <div class="callout" style="margin-top:auto;">
+          <div class="callout-icon">!</div>
+          <div class="callout-text"><strong style="font-weight:600;">Primary green is a spotlight.</strong><br><span style="color:var(--ink-3);font-size:14px;">Reserve for the single most important moment. One per screen. Active state, hero metric, primary CTA. Never wallpaper.</span></div>
+        </div>
+      </div>
+      <div class="l5-col avoid">
+        <div class="l5-col-head">
+          <span class="l5-col-label">AVOID</span>
+          <span class="l5-col-tick">✗</span>
+        </div>
+        <div class="l5-tiles" style="grid-template-columns:1fr;flex:initial;">
+          <div class="l5-tile" style="flex-direction:row;align-items:center;">
+            <div class="l5-tile-img" style="background:#C3EB42;flex:0 0 80px;height:80px;min-height:0;color:var(--ink);">GREEN BG</div>
+            <div style="flex:1;">
+              <div class="l5-tile-label">Green as wallpaper</div>
+              <div class="l5-tile-why">Full panels of primary green flatten hierarchy. The accent disappears when everything is the accent.</div>
+            </div>
+          </div>
+          <div class="l5-tile" style="flex-direction:row;align-items:center;">
+            <div class="l5-tile-img" style="background:linear-gradient(135deg,#FF3B30,#FFC000);flex:0 0 80px;height:80px;min-height:0;color:white;font-weight:700;">SEMANTIC</div>
+            <div style="flex:1;">
+              <div class="l5-tile-label">Semantic colors as decoration</div>
+              <div class="l5-tile-why">Red, yellow, green carry meaning. Use them only when something is broken, warned, or won. Never for styling.</div>
+            </div>
+          </div>
+          <div class="l5-tile" style="flex-direction:row;align-items:center;">
+            <div class="l5-tile-img" style="background:#0D0D0D;flex:0 0 80px;height:80px;min-height:0;"><span style="color:#C3EB42;font-size:18px;">!</span></div>
+            <div style="flex:1;">
+              <div class="l5-tile-label">Stacked greens (Lime + Soft)</div>
+              <div class="l5-tile-why">Soft Green #A8D632 lives <em style="font-style:normal;color:var(--ink-2);">inside the mark only.</em> Never in UI, type, or surfaces.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">02 · Color · Usage rules</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 06 · TYPOGRAPHY GEIST -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="06 Typography Geist">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 02 · FOUNDATIONS</div>
+    <div class="head-right counter">06 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">02 · Foundations</div>
+      <h2 class="l3-title">Geist.</h2>
+      <p class="l3-purpose">One family. Built by Vercel for screens. Tight tracking on display, generous on body. Geist Mono pairs for codes, data, and eyebrows.</p>
+      <div class="l3-meta">
+        Family · Geist + Geist Mono<br>
+        Weights · 400 · 500 · 600 · 700 · 800 · 900<br>
+        Source · vercel.com/font
+      </div>
+    </div>
+    <div class="l3-canvas" style="gap:32px;justify-content:space-between;">
+      <div style="display:grid;grid-template-columns:auto 1fr;gap:64px;align-items:center;">
+        <div class="specimen-aa">Aa</div>
+        <div class="weight-ladder">
+          <div class="weight-ladder-row">
+            <div class="weight-label">Regular · 400</div>
+            <div class="weight-sample" style="font-weight:400;">Win the auction.</div>
+          </div>
+          <div class="weight-ladder-row">
+            <div class="weight-label">Medium · 500</div>
+            <div class="weight-sample" style="font-weight:500;">Win the auction.</div>
+          </div>
+          <div class="weight-ladder-row">
+            <div class="weight-label">Semibold · 600</div>
+            <div class="weight-sample" style="font-weight:600;">Win the auction.</div>
+          </div>
+          <div class="weight-ladder-row">
+            <div class="weight-label">Bold · 700</div>
+            <div class="weight-sample" style="font-weight:700;">Win the auction.</div>
+          </div>
+          <div class="weight-ladder-row">
+            <div class="weight-label">ExtraBold · 800</div>
+            <div class="weight-sample" style="font-weight:800;">Win the auction.</div>
+          </div>
+        </div>
+      </div>
+      <div style="border-top:1px solid var(--border-2);padding-top:24px;">
+        <div class="mono-label" style="margin-bottom:12px;">Glyphs</div>
+        <div class="specimen-glyphs">ABCDEFGHIJKLMNOPQRSTUVWXYZ&nbsp;&nbsp;abcdefghijklmnopqrstuvwxyz&nbsp;&nbsp;0123456789&nbsp;&nbsp;$%·×→#</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">02 · Typography</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 07 · TYPE SCALE -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="07 Type scale">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 02 · FOUNDATIONS</div>
+    <div class="head-right counter">07 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">02 · Foundations</div>
+      <h2 class="l3-title">Type scale.</h2>
+      <p class="l3-purpose">Six sizes. Each does one job. Display tightens; body breathes. Tracking gets tighter as size grows.</p>
+      <div class="l3-meta">
+        Base unit · 8px<br>
+        Body line-height · 1.5–1.6<br>
+        Display tracking · -0.025em
+      </div>
+    </div>
+    <div class="l3-canvas" style="justify-content:center;">
+      <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:12px;padding:48px 56px;">
+        <div class="scale-row">
+          <div class="scale-sample-h1">One platform for every ad.</div>
+          <div class="scale-meta"><strong style="color:var(--ink-2)">H1</strong> · 48 / 56 / 600<br>page titles · hero</div>
+        </div>
+        <div class="scale-row">
+          <div class="scale-sample-h2">One dashboard for every ad platform.</div>
+          <div class="scale-meta"><strong style="color:var(--ink-2)">H2</strong> · 32 / 40 / 600<br>section heads</div>
+        </div>
+        <div class="scale-row">
+          <div class="scale-sample-h3">Bulk Campaign Launch</div>
+          <div class="scale-meta"><strong style="color:var(--ink-2)">H3</strong> · 22 / 30 / 600<br>cards · subsections</div>
+        </div>
+        <div class="scale-row">
+          <div class="scale-sample-bl">Launch hundreds of campaigns across Meta, TikTok and NewsBreak in a few minutes.</div>
+          <div class="scale-meta"><strong style="color:var(--ink-2)">Body Lg</strong> · 18 / 28 / 400<br>intros · prominent body</div>
+        </div>
+        <div class="scale-row">
+          <div class="scale-sample-br">Manage Meta, TikTok &amp; NewsBreak from one place. Route budget toward the winners. Skip the spreadsheets.</div>
+          <div class="scale-meta"><strong style="color:var(--ink-2)">Body</strong> · 15 / 24 / 400<br>default UI · prose</div>
+        </div>
+        <div class="scale-row">
+          <div class="scale-sample-bs">Last updated 2 mins ago · ROAS 4.2× · CPA $12.40</div>
+          <div class="scale-meta"><strong style="color:var(--ink-2)">Body Sm</strong> · 12 / 18 / 400<br>captions · meta</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">02 · Type scale</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 08 · COMPONENTS -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="08 Components">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 03 · SYSTEM</div>
+    <div class="head-right counter">08 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">03 · System</div>
+      <h2 class="l3-title">Components &amp; UI patterns.</h2>
+      <p class="l3-purpose">The recurring building blocks. Grouped as a system, not isolated specimens.</p>
+      <div class="l3-meta">
+        Buttons · 4 states<br>
+        Cards · 1 surface<br>
+        Callout · 1 voice<br>
+        Steps · numbered, primary active
+      </div>
+    </div>
+    <div class="l3-canvas" style="gap:28px;">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;flex:1;">
+        <!-- Buttons -->
+        <div class="card">
+          <div class="card-eyebrow">Buttons · pill · 999px</div>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+            <span class="btn btn-primary">Primary Button</span>
+            <span class="btn btn-primary-hover">Hover state</span>
+            <span class="btn btn-secondary">Secondary Button</span>
+            <span class="btn btn-disabled">Disabled state</span>
+          </div>
+          <div class="spec-line">Primary · #C3EB42 on ink · Geist 600 · 12/24px padding</div>
+        </div>
+        <!-- Step indicators -->
+        <div class="card">
+          <div class="card-eyebrow">Step indicators</div>
+          <div class="steps">
+            <div class="step done">
+              <div class="step-num">1</div>
+              <div class="step-label">Connect<br>Accounts</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step active">
+              <div class="step-num">2</div>
+              <div class="step-label">Launch<br>at Scale</div>
+            </div>
+            <div class="step-line"></div>
+            <div class="step todo">
+              <div class="step-num">3</div>
+              <div class="step-label">Automate<br>&amp; Scale</div>
+            </div>
+          </div>
+          <div class="spec-line">Active · primary fill · ink-inverse text</div>
+        </div>
+        <!-- Cards -->
+        <div class="card">
+          <div class="card-eyebrow">Cards · radius 10px · 1px ink-line border</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+            <div style="border:1px solid var(--border);border-radius:8px;padding:18px;background:var(--warm);">
+              <div style="width:24px;height:24px;border-radius:6px;background:var(--primary);margin-bottom:10px;"></div>
+              <div style="font-weight:600;font-size:15px;">Bulk Launch</div>
+              <div style="font-size:12px;color:var(--ink-4);line-height:1.5;margin-top:4px;">Manage campaigns across Meta and TikTok.</div>
+            </div>
+            <div style="border:1px solid var(--border);border-radius:8px;padding:18px;background:var(--warm);">
+              <div style="width:24px;height:24px;border-radius:6px;background:var(--ink);margin-bottom:10px;"></div>
+              <div style="font-weight:600;font-size:15px;">Creative Gen</div>
+              <div style="font-size:12px;color:var(--ink-4);line-height:1.5;margin-top:4px;">High-performing variations in seconds.</div>
+            </div>
+          </div>
+          <div class="spec-line">Icon · 24px · accent or ink · never both in same card</div>
+        </div>
+        <!-- Callout -->
+        <div class="card">
+          <div class="card-eyebrow">Callout · pale primary tint</div>
+          <div class="callout">
+            <div class="callout-icon">i</div>
+            <div class="callout-text"><strong style="font-weight:600">Tip ·</strong> Bulk launches batch by default. Override at the ad-set level only when you need to.</div>
+          </div>
+          <div class="spec-line">Background · primary @ 14% · border @ 30%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">03 · Components</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 09 · ICONOGRAPHY -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="09 Iconography">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 03 · SYSTEM</div>
+    <div class="head-right counter">09 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">03 · System</div>
+      <h2 class="l3-title">Iconography.</h2>
+      <p class="l3-purpose">Geometric, functional, dev-tool feel. Outlines only. Never decorative.</p>
+      <div class="l3-meta">
+        Style · outline<br>
+        Stroke · 1.5px · rounded caps<br>
+        Source · Lucide<br>
+        Color · inherits currentColor
+      </div>
+    </div>
+    <div class="l3-canvas" style="gap:24px;">
+      <!-- TOP : context + scale + states -->
+      <div style="display:grid;grid-template-columns:100px 1fr;gap:32px;flex:1;min-height:0;">
+        <!-- Real sidebar from product -->
+        <div style="background:var(--ink);border-radius:14px;padding:14px 0 14px;display:flex;flex-direction:column;align-items:center;gap:10px;justify-content:flex-start;overflow:hidden;">
+          <div class="mono-tag" style="color:rgba(255,255,255,0.4);font-size:8px;letter-spacing:0.14em;text-align:center;">IN PRODUCT</div>
+          <img src="assets/sidebar-real.png" alt="FabFunnel app sidebar" style="width:auto;max-width:60px;height:auto;max-height:calc(100% - 24px);display:block;"/>
+        </div>
+        <!-- Right panel: scale + states + USE/AVOID -->
+        <div style="display:flex;flex-direction:column;gap:20px;">
+          <!-- Scale -->
+          <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:12px;padding:24px 28px;">
+            <div class="mono-label" style="margin-bottom:14px;color:var(--primary-dark);font-weight:600;">SCALE · 4 SIZES</div>
+            <div style="display:flex;align-items:flex-end;gap:48px;">
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <div class="mono-tag" style="font-size:10px;">16 · INLINE</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <div class="mono-tag" style="font-size:10px;">20 · NAV</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <div class="mono-tag" style="font-size:10px;">24 · ACTION</div>
+              </div>
+              <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <div class="mono-tag" style="font-size:10px;">32 · FEATURE</div>
+              </div>
+              <div style="flex:1;border-left:1px solid var(--border);padding-left:32px;align-self:stretch;display:flex;flex-direction:column;justify-content:center;">
+                <div class="mono-label" style="font-size:10px;margin-bottom:6px;">STROKE</div>
+                <div style="font-size:24px;font-weight:600;letter-spacing:-0.02em;line-height:1;">1.5px</div>
+                <div class="mono-tag" style="font-size:10px;margin-top:6px;">rounded caps · rounded joins</div>
+              </div>
+            </div>
+          </div>
+          <!-- States -->
+          <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:12px;padding:24px 28px;">
+            <div class="mono-label" style="margin-bottom:14px;color:var(--primary-dark);font-weight:600;">STATES</div>
+            <div style="display:flex;gap:32px;align-items:center;">
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="width:36px;height:36px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:var(--ink-2);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.04em;"><div style="font-weight:600;color:var(--ink-2);">Default</div><div style="color:var(--ink-4);font-size:10px;">ink · inherits</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="width:36px;height:36px;border-radius:8px;background:var(--warm-2);display:inline-flex;align-items:center;justify-content:center;color:var(--primary-dark);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.04em;"><div style="font-weight:600;color:var(--ink-2);">Hover</div><div style="color:var(--ink-4);font-size:10px;">Rich · warm tint</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="width:36px;height:36px;border-radius:8px;background:var(--primary);display:inline-flex;align-items:center;justify-content:center;color:var(--ink);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.04em;"><div style="font-weight:600;color:var(--ink-2);">Active</div><div style="color:var(--ink-4);font-size:10px;">Lime · primary fill</div></div>
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;">
+                <span style="width:36px;height:36px;border-radius:8px;display:inline-flex;align-items:center;justify-content:center;color:var(--ink-5);"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg></span>
+                <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.04em;"><div style="font-weight:600;color:var(--ink-4);">Disabled</div><div style="color:var(--ink-5);font-size:10px;">Slate · 40% opacity</div></div>
+              </div>
+            </div>
+          </div>
+          <!-- USE / AVOID -->
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;flex:1;min-height:0;">
+            <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:12px;padding:20px 24px;">
+              <div class="mono-label" style="color:var(--primary-dark);font-weight:600;margin-bottom:12px;">USE</div>
+              <div style="display:flex;gap:14px;align-items:center;">
+                <div style="width:44px;height:44px;border-radius:8px;background:var(--warm-2);display:inline-flex;align-items:center;justify-content:center;color:var(--ink-2);"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+                <div style="width:44px;height:44px;border-radius:8px;background:var(--warm-2);display:inline-flex;align-items:center;justify-content:center;color:var(--ink-2);"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg></div>
+                <div style="width:44px;height:44px;border-radius:8px;background:var(--warm-2);display:inline-flex;align-items:center;justify-content:center;color:var(--ink-2);"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/></svg></div>
+                <div style="font-size:12px;color:var(--ink-3);line-height:1.5;flex:1;">Outline · geometric · functional · neutral · same stroke weight across the set.</div>
+              </div>
+            </div>
+            <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:12px;padding:20px 24px;">
+              <div class="mono-label" style="color:var(--ink-4);font-weight:600;margin-bottom:12px;">AVOID</div>
+              <div style="display:flex;gap:14px;align-items:center;">
+                <div style="width:44px;height:44px;border-radius:8px;background:var(--ink);display:inline-flex;align-items:center;justify-content:center;color:var(--paper);"><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg></div>
+                <div style="width:44px;height:44px;border-radius:8px;background:linear-gradient(135deg,#FF61DC,#7B61FF);display:inline-flex;align-items:center;justify-content:center;color:white;font-size:18px;">★</div>
+                <div style="width:44px;height:44px;border-radius:8px;background:var(--warm-2);display:inline-flex;align-items:center;justify-content:center;color:var(--ink-3);font-family:cursive;font-size:22px;">~</div>
+                <div style="font-size:12px;color:var(--ink-3);line-height:1.5;flex:1;">Filled solids · gradients · hand-drawn · emoji · mixed weights or whimsy.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">03 · Iconography</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 10 · SPACING & LAYOUT -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="10 Spacing">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 03 · SYSTEM</div>
+    <div class="head-right counter">10 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">03 · System</div>
+      <h2 class="l3-title">Spacing &amp; layout.</h2>
+      <p class="l3-purpose">Everything snaps to 8px. The grid holds the whole product together.</p>
+      <div class="l3-meta">
+        Base · 8px<br>
+        Radius · 4 / 6 / 8 / 12<br>
+        Grid · 12 cols · 24px gutter
+      </div>
+    </div>
+    <div class="l3-canvas" style="gap:32px;justify-content:space-between;">
+      <!-- Spacing ruler -->
+      <div>
+        <div class="mono-label" style="margin-bottom:12px;">SPACING SCALE · 8PX BASE</div>
+        <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:10px;padding:32px;">
+          <div class="ruler">
+            <div class="ruler-block"><div class="ruler-bar" style="height:8px;"></div><div class="ruler-label">8</div></div>
+            <div class="ruler-block"><div class="ruler-bar" style="height:16px;"></div><div class="ruler-label">16</div></div>
+            <div class="ruler-block"><div class="ruler-bar" style="height:24px;"></div><div class="ruler-label">24</div></div>
+            <div class="ruler-block"><div class="ruler-bar" style="height:32px;"></div><div class="ruler-label">32</div></div>
+            <div class="ruler-block"><div class="ruler-bar" style="height:40px;"></div><div class="ruler-label">40</div></div>
+            <div class="ruler-block"><div class="ruler-bar" style="height:48px;"></div><div class="ruler-label">48</div></div>
+            <div class="ruler-block"><div class="ruler-bar" style="height:64px;"></div><div class="ruler-label">64</div></div>
+          </div>
+        </div>
+      </div>
+      <!-- Radius examples -->
+      <div>
+        <div class="mono-label" style="margin-bottom:12px;">BORDER RADIUS</div>
+        <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:10px;padding:32px;">
+          <div class="radius-row">
+            <div class="radius-tile">
+              <div class="radius-box" style="border-radius:4px;"></div>
+              <div class="radius-meta"><strong>4px</strong>micro chips</div>
+            </div>
+            <div class="radius-tile">
+              <div class="radius-box" style="border-radius:6px;"></div>
+              <div class="radius-meta"><strong>6px</strong>form fields</div>
+            </div>
+            <div class="radius-tile">
+              <div class="radius-box" style="border-radius:8px;"></div>
+              <div class="radius-meta"><strong>8px</strong>buttons</div>
+            </div>
+            <div class="radius-tile">
+              <div class="radius-box" style="border-radius:12px;"></div>
+              <div class="radius-meta"><strong>12px</strong>cards · panels</div>
+            </div>
+            <div class="radius-tile">
+              <div class="radius-box" style="border-radius:999px;background:var(--primary);border-color:var(--primary);"></div>
+              <div class="radius-meta"><strong>pill</strong>CTAs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Grid overlay -->
+      <div>
+        <div class="mono-label" style="margin-bottom:12px;">12-COLUMN GRID · 24PX GUTTER</div>
+        <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:10px;padding:24px;position:relative;">
+          <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:8px;height:60px;">
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+            <div style="background:rgba(195,235,66,0.15);border:1px dashed rgba(143,184,33,0.5);"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between;margin-top:14px;">
+            <div class="spec-line">1280px container · marketing</div>
+            <div class="spec-line">Fluid · in-product</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">03 · Spacing &amp; layout</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 11 · BUILT FOR · PERSONAS -->
+<!-- ================================================================= -->
+<section class="l4" data-screen-label="11 Personas">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 04 · AUDIENCE</div>
+    <div class="head-right counter">11 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l4-head">
+      <div class="l4-head-left">
+        <div class="l4-section">04 · Audience &amp; product</div>
+        <h2 class="l4-title">Built for four operators.</h2>
+      </div>
+      <div class="l4-head-right">Speak to them like they already buy media for a living.<br>They do.</div>
+    </div>
+    <div class="l4-grid l4-grid-2x2">
+      <div class="persona-card accent" style="padding:36px;gap:24px;">
+        <div class="persona-head" style="justify-content:space-between;align-items:flex-start;">
+          <div style="display:flex;align-items:center;gap:18px;">
+            <div class="persona-icon" style="width:56px;height:56px;border-radius:14px;">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 0 0-16 0"/></svg>
+            </div>
+            <div>
+              <div class="persona-title" style="font-size:26px;">Media Buyers</div>
+              <div class="persona-tag">SCALE &amp; SPEED</div>
+            </div>
+          </div>
+          <div class="mono-tag" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-2);font-weight:600;">01</div>
+        </div>
+        <div class="persona-bullets" style="gap:8px;">
+          <div class="persona-bullet">Bulk campaigns across every platform</div>
+          <div class="persona-bullet">Multi-platform routing and reporting</div>
+          <div class="persona-bullet">Optimize at scale, not screen-by-screen</div>
+        </div>
+        <div style="margin-top:auto;background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:8px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.02em;line-height:1.5;">
+          <span style="color:var(--primary);">→</span> ROAS 4.2× · $130K spend · $338K revenue · 7 live campaigns
+        </div>
+      </div>
+      <div class="persona-card" style="padding:36px;gap:24px;">
+        <div class="persona-head" style="justify-content:space-between;align-items:flex-start;">
+          <div style="display:flex;align-items:center;gap:18px;">
+            <div class="persona-icon" style="width:56px;height:56px;border-radius:14px;">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <div>
+              <div class="persona-title" style="font-size:26px;">Affiliate Marketers</div>
+              <div class="persona-tag">WINNERS &amp; OFFERS</div>
+            </div>
+          </div>
+          <div class="mono-tag" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-2);font-weight:600;">02</div>
+        </div>
+        <div class="persona-bullets" style="gap:8px;">
+          <div class="persona-bullet">Scale offers across platforms in one queue</div>
+          <div class="persona-bullet">Track and optimize at the creative level</div>
+          <div class="persona-bullet">Industry insights to find winners faster</div>
+        </div>
+        <div style="margin-top:auto;background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:8px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.02em;line-height:1.5;">
+          <span style="color:var(--primary);">→</span> 12 offers live · 3 winners scaling · paused 4 underperformers
+        </div>
+      </div>
+      <div class="persona-card" style="padding:36px;gap:24px;">
+        <div class="persona-head" style="justify-content:space-between;align-items:flex-start;">
+          <div style="display:flex;align-items:center;gap:18px;">
+            <div class="persona-icon" style="width:56px;height:56px;border-radius:14px;">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+            </div>
+            <div>
+              <div class="persona-title" style="font-size:26px;">Ecommerce Brands</div>
+              <div class="persona-tag">ROAS &amp; FEEDS</div>
+            </div>
+          </div>
+          <div class="mono-tag" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-2);font-weight:600;">03</div>
+        </div>
+        <div class="persona-bullets" style="gap:8px;">
+          <div class="persona-bullet">Drive ROAS across all owned channels</div>
+          <div class="persona-bullet">Automate creative testing cycles</div>
+          <div class="persona-bullet">Product-feed integration, platform-native</div>
+        </div>
+        <div style="margin-top:auto;background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:8px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.02em;line-height:1.5;">
+          <span style="color:var(--primary);">→</span> 112 SKUs · 4 platforms · 24h iteration cycle · CPA $12.40
+        </div>
+      </div>
+      <div class="persona-card" style="padding:36px;gap:24px;">
+        <div class="persona-head" style="justify-content:space-between;align-items:flex-start;">
+          <div style="display:flex;align-items:center;gap:18px;">
+            <div class="persona-icon" style="width:56px;height:56px;border-radius:14px;">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg>
+            </div>
+            <div>
+              <div class="persona-title" style="font-size:26px;">Ad Agency Owners</div>
+              <div class="persona-tag">CLIENTS &amp; CONTROL</div>
+            </div>
+          </div>
+          <div class="mono-tag" style="font-size:13px;letter-spacing:0.18em;color:var(--ink-2);font-weight:600;">04</div>
+        </div>
+        <div class="persona-bullets" style="gap:8px;">
+          <div class="persona-bullet">Multiple clients from one workspace</div>
+          <div class="persona-bullet">Role-based access, white-label reporting</div>
+          <div class="persona-bullet">Team collaboration without context switching</div>
+        </div>
+        <div style="margin-top:auto;background:var(--ink);color:var(--paper);padding:14px 18px;border-radius:8px;font-family:var(--font-mono);font-size:12px;letter-spacing:0.02em;line-height:1.5;">
+          <span style="color:var(--primary);">→</span> 12 clients · 47 ad accounts · 8 teammates · 1 dashboard
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">04 · Built for</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 12 · KEY FEATURES -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="12 Key features">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 04 · AUDIENCE</div>
+    <div class="head-right counter">12 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">04 · Audience &amp; product</div>
+      <h2 class="l3-title">Three pillars.</h2>
+      <p class="l3-purpose">Everything else supports them. Lead with these in any deck, any landing page, any sales conversation.</p>
+      <div class="l3-meta">
+        Creative Generation · the unlock<br>
+        Bulk Launch · the why-now<br>
+        Industry Insights · the signal
+      </div>
+    </div>
+    <div class="l3-canvas">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px;flex:1;">
+        <!-- 01 Creative Generation -->
+        <div class="feature-card accent" style="padding:32px;gap:22px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div class="feature-icon" style="width:64px;height:64px;border-radius:16px;">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .962 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.962 0z"/></svg>
+            </div>
+            <div class="mono-tag" style="font-size:11px;letter-spacing:0.16em;">01</div>
+          </div>
+          <div>
+            <div class="feature-name" style="font-size:28px;">Creative Generation</div>
+            <div class="feature-desc" style="margin-top:10px;">AI-powered creative gen producing high-performing ads in seconds. Hero shots, brand ads, performance ads. Same engine, different brief.</div>
+          </div>
+          <div style="background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:auto;">
+            <div class="mono-tag" style="font-size:10px;margin-bottom:10px;display:flex;justify-content:space-between;"><span>4 VARIATIONS</span><span style="color:var(--primary-dark);">●</span></div>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px;">
+              <div style="aspect-ratio:1;background:var(--ink);border-radius:4px;border:2px solid var(--primary);"></div>
+              <div style="aspect-ratio:1;background:#5C7C9E;border-radius:4px;"></div>
+              <div style="aspect-ratio:1;background:#8B5C5C;border-radius:4px;"></div>
+              <div style="aspect-ratio:1;background:#C7B89E;border-radius:4px;"></div>
+            </div>
+          </div>
+          <div class="feature-tag" style="margin-top:0;">GENIE · OUTPUT IN SECONDS</div>
+        </div>
+        <!-- 02 Bulk Launch -->
+        <div class="feature-card" style="padding:32px;gap:22px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div class="feature-icon" style="width:64px;height:64px;border-radius:16px;">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>
+            </div>
+            <div class="mono-tag" style="font-size:11px;letter-spacing:0.16em;">02</div>
+          </div>
+          <div>
+            <div class="feature-name" style="font-size:28px;">Bulk Launch</div>
+            <div class="feature-desc" style="margin-top:10px;">Launch hundreds of campaigns across Meta, TikTok &amp; NewsBreak in a few clicks. Batch by default, override when you mean to.</div>
+          </div>
+          <div style="background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:auto;">
+            <div class="mono-tag" style="font-size:10px;margin-bottom:10px;display:flex;justify-content:space-between;"><span>QUEUE · 112 READY</span><span style="color:var(--primary-dark);">●</span></div>
+            <div style="display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;align-items:center;gap:8px;font-size:11px;font-family:var(--font-mono);color:var(--ink-3);"><span style="width:16px;height:16px;border-radius:4px;background:#0668E1;color:white;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;">M</span>Meta · 48 campaigns</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:11px;font-family:var(--font-mono);color:var(--ink-3);"><span style="width:16px;height:16px;border-radius:4px;background:#000;color:white;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;">t</span>TikTok · 36 campaigns</div>
+              <div style="display:flex;align-items:center;gap:8px;font-size:11px;font-family:var(--font-mono);color:var(--ink-3);"><span style="width:16px;height:16px;border-radius:4px;background:#E73428;color:white;display:inline-flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;">N</span>NewsBreak · 28 campaigns</div>
+            </div>
+          </div>
+          <div class="feature-tag" style="margin-top:0;">SCALE · ALL PLATFORMS</div>
+        </div>
+        <!-- 03 Industry Insights -->
+        <div class="feature-card" style="padding:32px;gap:22px;">
+          <div style="display:flex;align-items:center;justify-content:space-between;">
+            <div class="feature-icon" style="width:64px;height:64px;border-radius:16px;">
+              <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+            </div>
+            <div class="mono-tag" style="font-size:11px;letter-spacing:0.16em;">03</div>
+          </div>
+          <div>
+            <div class="feature-name" style="font-size:28px;">Industry Insights</div>
+            <div class="feature-desc" style="margin-top:10px;">Fast-growing categories, winner ads, competitor moves. Operators don't run cycles in a vacuum. Give them the outside view.</div>
+          </div>
+          <div style="background:var(--warm);border:1px solid var(--border);border-radius:8px;padding:14px;margin-top:auto;">
+            <div class="mono-tag" style="font-size:10px;margin-bottom:8px;display:flex;justify-content:space-between;"><span>HAIR CARE · LAST 30D</span><span style="color:var(--primary-dark);">+214 ADS</span></div>
+            <svg width="100%" height="44" viewBox="0 0 200 44" preserveAspectRatio="none">
+              <polyline points="0,38 25,32 50,30 75,22 100,24 125,16 150,12 175,8 200,4" fill="none" stroke="#8FB821" stroke-width="2"/>
+              <polyline points="0,38 25,32 50,30 75,22 100,24 125,16 150,12 175,8 200,4 200,44 0,44" fill="rgba(195,235,66,0.2)" stroke="none"/>
+            </svg>
+          </div>
+          <div class="feature-tag" style="margin-top:0;">SIGNAL · OUTSIDE VIEW</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">04 · Key features</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 13 · OTHER FEATURES -->
+<!-- ================================================================= -->
+<section class="l4" data-screen-label="13 Other features">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 04 · AUDIENCE</div>
+    <div class="head-right counter">13 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l4-head">
+      <div class="l4-head-left">
+        <div class="l4-section">04 · Audience &amp; product</div>
+        <h2 class="l4-title">Other features.</h2>
+      </div>
+      <div class="l4-head-right">The support cast that rounds out the platform.<br>Each does one job. Well.</div>
+    </div>
+    <div class="l4-grid l4-grid-2x3">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+        </div>
+        <div class="feature-name">Creative Library</div>
+        <div class="feature-desc">Every asset, every variation, every winner. Searchable and reusable across briefs.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M10 6h4M6 10v4M14 17h-4"/></svg>
+        </div>
+        <div class="feature-name">Automation</div>
+        <div class="feature-desc">Rules, budgets and workflows that route spend toward winners while you sleep.</div>
+      </div>
+      <div class="feature-card accent">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </div>
+        <div class="feature-name">Catalogue</div>
+        <div class="feature-desc">Brands, products, categories. The knowledge base every creative pulls from.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+        </div>
+        <div class="feature-name">Co-pilot</div>
+        <div class="feature-desc">Always-on assistant trained on your accounts. Ask in plain English, get answers in numbers.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+        </div>
+        <div class="feature-name">Reporting</div>
+        <div class="feature-desc">Performance, spend, ROAS, gross margin. One view, every account.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div class="feature-name">User Management</div>
+        <div class="feature-desc">Roles, permissions, workspaces. Built for agencies running 12+ clients in parallel.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">04 · Other features</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 14 · INTEGRATIONS -->
+<!-- ================================================================= -->
+<section class="l4" data-screen-label="14 Integrations">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 04 · AUDIENCE</div>
+    <div class="head-right counter">14 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l4-head">
+      <div class="l4-head-left">
+        <div class="l4-section">04 · Audience &amp; product</div>
+        <h2 class="l4-title">Integrations.</h2>
+      </div>
+      <div class="l4-head-right">Partner marks lock up with clear space.<br>No recoloring. No re-cropping.</div>
+    </div>
+    <div class="l4-grid" style="grid-template-columns: 1fr 1fr; gap: 32px;">
+      <div class="intg-col" style="padding:40px;">
+        <div class="intg-col-head">
+          <div class="intg-col-title">Ad platforms</div>
+          <div class="intg-col-tag">03 · NATIVE</div>
+        </div>
+        <div class="intg-list">
+          <div class="intg-row" style="padding:16px 0;">
+            <div class="intg-logo" style="background:#0668E1;color:white;width:44px;height:44px;border-radius:10px;font-size:18px;">∞</div>
+            <div>
+              <div class="intg-name">Meta</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-4);margin-top:2px;letter-spacing:0.06em;">Facebook · Instagram · Messenger</div>
+            </div>
+            <div class="intg-meta">CAMPAIGN · ADSET · AD</div>
+          </div>
+          <div class="intg-row" style="padding:16px 0;">
+            <div class="intg-logo" style="background:#000;color:white;width:44px;height:44px;border-radius:10px;font-size:20px;font-weight:800;">t</div>
+            <div>
+              <div class="intg-name">TikTok</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-4);margin-top:2px;letter-spacing:0.06em;">For You · Spark Ads · Catalog</div>
+            </div>
+            <div class="intg-meta">CAMPAIGN · ADGROUP · AD</div>
+          </div>
+          <div class="intg-row" style="padding:16px 0;border-bottom:none;">
+            <div class="intg-logo" style="background:#E73428;color:white;width:44px;height:44px;border-radius:10px;font-size:18px;font-weight:700;">N</div>
+            <div>
+              <div class="intg-name">NewsBreak</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-4);margin-top:2px;letter-spacing:0.06em;">Local · Display · In-feed</div>
+            </div>
+            <div class="intg-meta">CAMPAIGN · CREATIVE</div>
+          </div>
+        </div>
+        <div style="margin-top:auto;padding-top:20px;border-top:1px dashed var(--border);font-family:var(--font-mono);font-size:11px;color:var(--ink-4);letter-spacing:0.08em;text-transform:uppercase;">
+          Bulk launch supported · all three
+        </div>
+      </div>
+      <div class="intg-col" style="padding:40px;">
+        <div class="intg-col-head">
+          <div class="intg-col-title">Integrations &amp; partners</div>
+          <div class="intg-col-tag">03 · TRACKING</div>
+        </div>
+        <div class="intg-list">
+          <div class="intg-row" style="padding:16px 0;">
+            <div class="intg-logo" style="background:#FF6B35;color:white;width:44px;height:44px;border-radius:10px;font-size:18px;font-weight:700;">R</div>
+            <div>
+              <div class="intg-name">RedTrack</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-4);margin-top:2px;letter-spacing:0.06em;">Attribution · ROAS · server-side</div>
+            </div>
+            <div class="intg-meta">PIXEL · API</div>
+          </div>
+          <div class="intg-row" style="padding:16px 0;">
+            <div class="intg-logo" style="background:#6E5BFB;color:white;width:44px;height:44px;border-radius:10px;font-size:18px;font-weight:700;">V</div>
+            <div>
+              <div class="intg-name">Voluum</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-4);margin-top:2px;letter-spacing:0.06em;">Click tracking · conversion attribution</div>
+            </div>
+            <div class="intg-meta">PIXEL · POSTBACK</div>
+          </div>
+          <div class="intg-row" style="padding:16px 0;border-bottom:none;">
+            <div class="intg-logo" style="background:#1F8A5B;color:white;width:44px;height:44px;border-radius:10px;font-size:14px;font-weight:700;">JV</div>
+            <div>
+              <div class="intg-name">JVZoo</div>
+              <div style="font-family:var(--font-mono);font-size:11px;color:var(--ink-4);margin-top:2px;letter-spacing:0.06em;">Affiliate networks · offer feeds</div>
+            </div>
+            <div class="intg-meta">FEED · API</div>
+          </div>
+        </div>
+        <div style="margin-top:auto;padding-top:20px;border-top:1px dashed var(--border);font-family:var(--font-mono);font-size:11px;color:var(--ink-4);letter-spacing:0.08em;text-transform:uppercase;">
+          Lockup rule · partner mark clear-space = mark height
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">04 · Integrations</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 15 · SCREEN REFERENCES (DARK) -->
+<!-- ================================================================= -->
+<section class="dark l4" data-screen-label="15 Screen references">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 04 · AUDIENCE</div>
+    <div class="head-right counter">15 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l4-head">
+      <div class="l4-head-left">
+        <div class="l4-section" style="color:var(--primary);">04 · Audience &amp; product</div>
+        <h2 class="l4-title">Screen references.</h2>
+      </div>
+      <div class="l4-head-right" style="color:rgba(255,255,255,0.55);">Real surfaces. Density and clarity in balance.<br>Accent lands once per screen.</div>
+    </div>
+    <div class="l4-grid" style="grid-template-columns:repeat(2,1fr);grid-template-rows:repeat(2,1fr);gap:24px;">
+      <div class="screen">
+        <div class="screen-image" style="aspect-ratio:auto;flex:1;border-bottom:none;"><img src="assets/screen-dashboard.png" alt="Dashboard overview" style="object-fit:cover;object-position:top left;"></div>
+        <div class="screen-caption" style="border-top:1px solid var(--border-dark);padding:16px 20px;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div class="screen-label" style="margin-bottom:2px;">01 · DASHBOARD</div>
+            <div class="screen-name">Performance overview</div>
+          </div>
+          <div class="screen-note" style="max-width:46%;margin:0;font-size:12px;">Spend, ROAS, margin at a glance. Trend chart below. Risk heatmap right rail.</div>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="screen-image" style="aspect-ratio:auto;flex:1;border-bottom:none;"><img src="assets/screen-studio-modes.png" alt="Genie studio modes" style="object-fit:cover;object-position:top left;"></div>
+        <div class="screen-caption" style="border-top:1px solid var(--border-dark);padding:16px 20px;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div class="screen-label" style="margin-bottom:2px;">02 · GENIE</div>
+            <div class="screen-name">Mode &amp; format select</div>
+          </div>
+          <div class="screen-note" style="max-width:46%;margin:0;font-size:12px;">Pick a mode and format. Studio fills in everything else. One accent at a time.</div>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="screen-image" style="aspect-ratio:auto;flex:1;border-bottom:none;"><img src="assets/screen-catalogue-mamaearth.png" alt="Catalogue brand" style="object-fit:cover;object-position:top left;"></div>
+        <div class="screen-caption" style="border-top:1px solid var(--border-dark);padding:16px 20px;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div class="screen-label" style="margin-bottom:2px;">03 · CATALOGUE</div>
+            <div class="screen-name">Brand knowledge base</div>
+          </div>
+          <div class="screen-note" style="max-width:46%;margin:0;font-size:12px;">Voice, palette, USPs, audiences, competitors. The single source per brand.</div>
+        </div>
+      </div>
+      <div class="screen">
+        <div class="screen-image" style="aspect-ratio:auto;flex:1;border-bottom:none;"><img src="assets/screen-genie-results.png" alt="Genie results" style="object-fit:cover;object-position:top left;"></div>
+        <div class="screen-caption" style="border-top:1px solid var(--border-dark);padding:16px 20px;display:flex;align-items:center;gap:20px;">
+          <div style="flex:1;">
+            <div class="screen-label" style="margin-bottom:2px;">04 · RESULTS</div>
+            <div class="screen-name">Hero-shot variations</div>
+          </div>
+          <div class="screen-note" style="max-width:46%;margin:0;font-size:12px;">Compare, regenerate, save. Each concept yields four variants by default.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark-dark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline" style="color:var(--primary);">04 · Screen references</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 16 · REFERENCE BRANDS -->
+<!-- ================================================================= -->
+<section class="l4" data-screen-label="16 Reference brands">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 05 · AESTHETIC</div>
+    <div class="head-right counter">16 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l4-head">
+      <div class="l4-head-left">
+        <div class="l4-section">05 · Aesthetic extensions</div>
+        <h2 class="l4-title">Reference brands.</h2>
+      </div>
+      <div class="l4-head-right">Direct references in the space.<br>Take the lesson, not the look.</div>
+    </div>
+    <div class="l4-grid l4-grid-2x3">
+      <!-- 1 · AdCreative.ai -->
+      <div class="ref-tile">
+        <div class="ref-tile-head">
+          <div>
+            <div class="ref-tile-name">AdCreative.ai</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-4);letter-spacing:0.06em;margin-top:2px;">adcreative.ai</div>
+          </div>
+          <div class="ref-tile-cat">CREATIVE GEN</div>
+        </div>
+        <div class="ref-tile-screenshot" style="background:#FAFAFA;">
+          <div style="position:absolute;inset:14px;border-radius:6px;background:white;border:1px solid #EEE;display:flex;flex-direction:column;gap:6px;padding:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:var(--font-mono);font-size:10px;color:#F25C1F;font-weight:700;letter-spacing:0.04em;">ADCREATIVE</div>
+              <div style="display:flex;gap:3px;"><div style="width:8px;height:8px;border-radius:50%;background:#F25C1F;"></div></div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;flex:1;margin-top:6px;">
+              <div style="background:linear-gradient(135deg,#FF8C42,#F25C1F);border-radius:3px;"></div>
+              <div style="background:#F0E5D8;border-radius:3px;"></div>
+              <div style="background:#2E3B4E;border-radius:3px;"></div>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:8px;color:#999;letter-spacing:0.06em;">CONVERSION SCORE 96 / 100</div>
+          </div>
+        </div>
+        <div class="ref-tile-takeaway"><em>What to borrow</em>Conversion-score overlay on every output. Make the AI's judgement visible. Numbers attached to creatives, not vibes.</div>
+      </div>
+      <!-- 2 · Madgicx -->
+      <div class="ref-tile">
+        <div class="ref-tile-head">
+          <div>
+            <div class="ref-tile-name">Madgicx</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-4);letter-spacing:0.06em;margin-top:2px;">madgicx.com</div>
+          </div>
+          <div class="ref-tile-cat">AGENTIC ADS</div>
+        </div>
+        <div class="ref-tile-screenshot" style="background:#0D0E14;">
+          <div style="position:absolute;inset:14px;border-radius:6px;background:#1A1B26;border:1px solid #2A2B36;display:flex;flex-direction:column;gap:6px;padding:12px;">
+            <div style="font-family:var(--font-mono);font-size:9px;color:#A78BFA;letter-spacing:0.06em;">AI MARKETER · 4 ACTIONS</div>
+            <div style="display:flex;flex-direction:column;gap:3px;margin-top:4px;">
+              <div style="height:7px;background:rgba(167,139,250,0.4);border-radius:1px;width:90%;"></div>
+              <div style="height:7px;background:rgba(167,139,250,0.25);border-radius:1px;width:75%;"></div>
+              <div style="height:7px;background:rgba(167,139,250,0.25);border-radius:1px;width:80%;"></div>
+            </div>
+            <div style="margin-top:auto;padding-top:8px;border-top:1px solid #2A2B36;font-family:var(--font-mono);font-size:8px;color:#A78BFA;letter-spacing:0.05em;">→ PAUSED 3 LOW-ROAS ADS</div>
+          </div>
+        </div>
+        <div class="ref-tile-takeaway"><em>What to borrow</em>Agentic loop, not dashboard. Show the AI's actions as a feed of moves taken, not panels to interpret.</div>
+      </div>
+      <!-- 3 · AdManage.ai -->
+      <div class="ref-tile">
+        <div class="ref-tile-head">
+          <div>
+            <div class="ref-tile-name">AdManage.ai</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-4);letter-spacing:0.06em;margin-top:2px;">admanage.ai</div>
+          </div>
+          <div class="ref-tile-cat">BULK LAUNCH</div>
+        </div>
+        <div class="ref-tile-screenshot" style="background:#0A0A0A;">
+          <div style="position:absolute;inset:14px;border-radius:6px;background:#141414;border:1px solid #2A2A2A;display:flex;flex-direction:column;gap:5px;padding:12px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <div style="font-family:var(--font-mono);font-size:9px;color:#A8E000;font-weight:600;letter-spacing:0.06em;">LAUNCH · 50 ADS</div>
+              <div style="font-family:var(--font-mono);font-size:8px;color:#777;">17s</div>
+            </div>
+            <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:3px;margin-top:4px;">
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.3);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.3);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.3);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.15);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.15);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.15);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.1);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.1);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.1);border-radius:2px;"></div>
+              <div style="aspect-ratio:1;background:rgba(168,224,0,0.05);border-radius:2px;"></div>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:8px;color:#666;margin-top:auto;letter-spacing:0.06em;">META · TIKTOK · NEWSBREAK</div>
+          </div>
+        </div>
+        <div class="ref-tile-takeaway"><em>What to borrow</em>Speed as the feature. "17s to launch 50 ads" beats "powerful ad management." Time saved is the metric.</div>
+      </div>
+      <!-- 4 · Tryholo.ai -->
+      <div class="ref-tile">
+        <div class="ref-tile-head">
+          <div>
+            <div class="ref-tile-name">Tryholo.ai</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-4);letter-spacing:0.06em;margin-top:2px;">tryholo.ai</div>
+          </div>
+          <div class="ref-tile-cat">AI UGC · VIDEO</div>
+        </div>
+        <div class="ref-tile-screenshot" style="background:#0F0F12;">
+          <div style="position:absolute;inset:14px;border-radius:6px;background:#1A1A1F;display:flex;gap:6px;padding:12px;">
+            <div style="width:34%;background:linear-gradient(180deg,#3B3B45,#1A1A1F);border-radius:4px;display:flex;align-items:flex-end;padding:8px;">
+              <div style="font-family:var(--font-mono);font-size:7px;color:#fff;background:rgba(0,0,0,0.5);padding:2px 4px;border-radius:2px;letter-spacing:0.05em;">UGC · 0:14</div>
+            </div>
+            <div style="flex:1;display:flex;flex-direction:column;gap:4px;">
+              <div style="height:8px;background:rgba(255,255,255,0.12);border-radius:1px;width:80%;"></div>
+              <div style="height:6px;background:rgba(255,255,255,0.08);border-radius:1px;width:90%;"></div>
+              <div style="height:6px;background:rgba(255,255,255,0.08);border-radius:1px;width:70%;"></div>
+              <div style="margin-top:auto;display:flex;gap:3px;">
+                <div style="height:18px;width:18px;border-radius:50%;background:#7DD3FC;"></div>
+                <div style="height:18px;width:18px;border-radius:50%;background:#F9A8D4;"></div>
+                <div style="height:18px;width:18px;border-radius:50%;background:#A7F3D0;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="ref-tile-takeaway"><em>What to borrow</em>Synthetic UGC presented as collaboration with avatars, not stock-footage replacement. The actor becomes a reusable asset.</div>
+      </div>
+      <!-- 5 · TryCrush.ai -->
+      <div class="ref-tile">
+        <div class="ref-tile-head">
+          <div>
+            <div class="ref-tile-name">TryCrush.ai</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-4);letter-spacing:0.06em;margin-top:2px;">trycrush.ai</div>
+          </div>
+          <div class="ref-tile-cat">AI MARKETING</div>
+        </div>
+        <div class="ref-tile-screenshot" style="background:#FFF7F0;">
+          <div style="position:absolute;inset:14px;border-radius:6px;background:white;border:1px solid #FFE0CC;display:flex;flex-direction:column;gap:6px;padding:12px;">
+            <div style="display:flex;align-items:center;gap:6px;">
+              <div style="width:14px;height:14px;border-radius:4px;background:#FF6B6B;"></div>
+              <div style="font-family:var(--font-mono);font-size:10px;color:#FF6B6B;font-weight:700;letter-spacing:0.04em;">CRUSH</div>
+            </div>
+            <div style="font-size:11px;font-weight:600;color:#1A1A1A;letter-spacing:-0.01em;margin-top:2px;">Marketing on autopilot</div>
+            <div style="display:flex;flex-direction:column;gap:3px;margin-top:auto;">
+              <div style="height:5px;background:#FFE0CC;border-radius:1px;width:90%;"></div>
+              <div style="height:5px;background:#FFE0CC;border-radius:1px;width:70%;"></div>
+              <div style="height:18px;width:50px;background:#FF6B6B;border-radius:9px;margin-top:4px;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="ref-tile-takeaway"><em>What to borrow</em>Emotional product naming. Operators want to "crush" the auction, not "manage" it. Verbs over nouns in the brand.</div>
+      </div>
+      <!-- 6 · Bir.ch -->
+      <div class="ref-tile">
+        <div class="ref-tile-head">
+          <div>
+            <div class="ref-tile-name">Bir.ch</div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--ink-4);letter-spacing:0.06em;margin-top:2px;">bir.ch</div>
+          </div>
+          <div class="ref-tile-cat">CREATIVE OPS</div>
+        </div>
+        <div class="ref-tile-screenshot" style="background:#F4F1EB;">
+          <div style="position:absolute;inset:14px;border-radius:6px;background:white;border:1px solid #E5E0D5;display:flex;flex-direction:column;gap:6px;padding:12px;">
+            <div style="display:flex;align-items:center;gap:6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2D5C2D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L12 22 M6 6 L18 6 M4 10 L20 10 M5 14 L19 14 M7 18 L17 18"/></svg>
+              <div style="font-family:var(--font-mono);font-size:10px;color:#2D5C2D;letter-spacing:0.06em;font-weight:600;">BIR.CH</div>
+            </div>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:6px;flex:1;">
+              <div style="background:#E5E0D5;border-radius:3px;"></div>
+              <div style="background:#D5CFC0;border-radius:3px;"></div>
+              <div style="background:#C5BFA5;border-radius:3px;"></div>
+              <div style="background:#E5E0D5;border-radius:3px;"></div>
+            </div>
+            <div style="font-family:var(--font-mono);font-size:8px;color:#2D5C2D;letter-spacing:0.06em;">12 BOARDS · 4 BRANDS</div>
+          </div>
+        </div>
+        <div class="ref-tile-takeaway"><em>What to borrow</em>Editorial restraint. Warm neutrals over neon. Creative ops tooling that feels like a notebook, not a workflow chart.</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">05 · Reference brands</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 17 · IMAGERY · SOCIALS -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="17 Imagery socials">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 05 · AESTHETIC</div>
+    <div class="head-right counter">17 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">05 · Aesthetic · Imagery 01 / 03</div>
+      <h2 class="l3-title">Imagery for socials.</h2>
+      <p class="l3-purpose">Posts read like Slack messages from a senior operator. Data is the visual. One number, one moment, one accent.</p>
+      <div class="l3-meta">
+        Channels · LinkedIn · IG · X<br>
+        Ratios · 1:1 · 4:5 · 9:16<br>
+        Type · Geist 700/800<br>
+        Accent · single per post
+      </div>
+    </div>
+    <div class="l3-canvas">
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:18px;flex:1;min-height:0;">
+        <!-- Social 01 · Stat tile · DARK 1:1 -->
+        <div class="img-sample" style="background:#0D0D0D;color:var(--paper);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">01</span>
+            <span>STAT TILE · 1:1</span>
+          </div>
+          <div class="img-sample-mock" style="background:#0D0D0D;aspect-ratio:1;">
+            <div style="position:absolute;inset:14px;display:flex;flex-direction:column;gap:6px;">
+              <div style="font-family:var(--font-mono);font-size:8px;color:var(--primary);letter-spacing:0.18em;text-transform:uppercase;font-weight:600;">THIS WEEK</div>
+              <div style="margin-top:auto;font-size:38px;font-weight:800;letter-spacing:-0.03em;line-height:0.95;">4.2<span style="color:var(--primary);">×</span><br>ROAS.</div>
+              <div style="font-family:var(--font-mono);font-size:8px;color:rgba(255,255,255,0.55);letter-spacing:0.06em;line-height:1.4;">112 campaigns · 3 platforms · 24h cycle</div>
+            </div>
+          </div>
+          <div class="img-sample-headline">A number is a post.</div>
+          <div class="img-sample-note">Single metric, hero scale. Mono caption pins context. No icons. No people.</div>
+        </div>
+
+        <!-- Social 02 · What we shipped · LIGHT 1:1 -->
+        <div class="img-sample" style="background:var(--paper);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">02</span>
+            <span>SHIPPED · 1:1</span>
+          </div>
+          <div class="img-sample-mock" style="background:var(--warm);aspect-ratio:1;">
+            <div style="position:absolute;inset:14px;background:white;border:1px solid var(--border);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:5px;">
+              <div style="font-family:var(--font-mono);font-size:7px;color:var(--ink-4);letter-spacing:0.14em;text-transform:uppercase;">v 2.7 · MAY</div>
+              <div style="font-size:14px;font-weight:700;letter-spacing:-0.02em;line-height:1.15;">Bulk launch goes to NewsBreak.</div>
+              <div style="display:flex;flex-direction:column;gap:3px;margin-top:auto;font-family:var(--font-mono);font-size:8px;color:var(--ink-3);letter-spacing:0.04em;">
+                <div style="display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;background:var(--primary);border-radius:50%;"></span>Templates by region</div>
+                <div style="display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;background:var(--primary);border-radius:50%;"></span>Cross-platform queue</div>
+                <div style="display:flex;align-items:center;gap:5px;"><span style="width:6px;height:6px;background:var(--primary);border-radius:50%;"></span>RRM hooks</div>
+              </div>
+            </div>
+          </div>
+          <div class="img-sample-headline">What shipped, in one card.</div>
+          <div class="img-sample-note">Changelog tone. Three line-items max. Engineering-coded, not marketing-coded.</div>
+        </div>
+
+        <!-- Social 03 · Pull-quote · CREAM 4:5 -->
+        <div class="img-sample" style="background:var(--warm);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">03</span>
+            <span>QUOTE · 4:5</span>
+          </div>
+          <div class="img-sample-mock" style="background:#F0EFE8;aspect-ratio:4/5;">
+            <div style="position:absolute;inset:14px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="font-size:48px;color:var(--primary-dark);font-weight:800;line-height:0.6;letter-spacing:-0.02em;">"</div>
+              <div style="font-size:13px;font-weight:600;letter-spacing:-0.015em;line-height:1.3;color:var(--ink);">We ran the cycle in <span style="background:var(--primary);">six minutes</span>. Used to take two days.</div>
+              <div style="display:flex;align-items:center;gap:6px;">
+                <div style="width:18px;height:18px;border-radius:50%;background:var(--ink);color:var(--paper);display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:7px;font-weight:700;">RA</div>
+                <div style="font-family:var(--font-mono);font-size:7px;color:var(--ink-4);letter-spacing:0.04em;line-height:1.3;">Head of Performance<br>Crescent · NA</div>
+              </div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Customer voice.</div>
+          <div class="img-sample-note">Use the words operators actually say. Cream + green highlight. No headshots.</div>
+        </div>
+
+        <!-- Social 04 · Vertical UI · DARK 9:16 -->
+        <div class="img-sample" style="background:#0D0D0D;color:var(--paper);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">04</span>
+            <span>STORY / REEL · 9:16</span>
+          </div>
+          <div class="img-sample-mock" style="background:#0D0D0D;aspect-ratio:9/16;">
+            <div style="position:absolute;inset:10px;display:flex;flex-direction:column;gap:6px;">
+              <div style="font-family:var(--font-mono);font-size:8px;color:var(--primary);letter-spacing:0.16em;text-transform:uppercase;font-weight:600;">DAY ONE</div>
+              <div style="font-size:17px;font-weight:800;letter-spacing:-0.025em;line-height:1.05;">Launch all platforms before the auction reopens.</div>
+              <div style="flex:1;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:4px;margin-top:4px;display:flex;flex-direction:column;gap:3px;padding:8px;">
+                <div style="display:grid;grid-template-columns:auto 1fr auto;gap:5px;align-items:center;font-family:var(--font-mono);font-size:6px;color:rgba(255,255,255,0.7);"><span style="width:8px;height:8px;background:#0668E1;border-radius:1px;"></span><span>Meta</span><span style="color:var(--primary);">●</span></div>
+                <div style="display:grid;grid-template-columns:auto 1fr auto;gap:5px;align-items:center;font-family:var(--font-mono);font-size:6px;color:rgba(255,255,255,0.7);"><span style="width:8px;height:8px;background:#000;border:1px solid rgba(255,255,255,0.2);border-radius:1px;"></span><span>TikTok</span><span style="color:var(--primary);">●</span></div>
+                <div style="display:grid;grid-template-columns:auto 1fr auto;gap:5px;align-items:center;font-family:var(--font-mono);font-size:6px;color:rgba(255,255,255,0.7);"><span style="width:8px;height:8px;background:#E73428;border-radius:1px;"></span><span>NewsBreak</span><span style="color:var(--primary);">●</span></div>
+              </div>
+              <div style="font-family:var(--font-mono);font-size:8px;letter-spacing:0.06em;color:var(--primary);">@fabfunnel</div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Story-native, not story-fitted.</div>
+          <div class="img-sample-note">Vertical UI snippet. Type stacks the way phones read. Handle pinned bottom.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">05 · Imagery · Socials</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 20 · IMAGERY · BLOGS -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="18 Imagery blogs">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 05 · AESTHETIC</div>
+    <div class="head-right counter">18 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">05 · Aesthetic · Imagery 02 / 03</div>
+      <h2 class="l3-title">Imagery for blogs.</h2>
+      <p class="l3-purpose">Editorial, not corporate. Article heroes are quiet. Inline imagery is product UI or data — never decoration. OG cards earn the share by saying something specific.</p>
+      <div class="l3-meta">
+        Article hero · type-led<br>
+        Inline · UI · data · code<br>
+        OG card · dark · 1200×630<br>
+        No author headshots · ever
+      </div>
+    </div>
+    <div class="l3-canvas">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);grid-template-rows:1fr 1fr;gap:18px;flex:1;min-height:0;">
+        <!-- Blog 01 · Article hero · DARK -->
+        <div class="img-sample" style="background:#0D0D0D;color:var(--paper);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">01</span>
+            <span>ARTICLE HERO · DARK</span>
+          </div>
+          <div class="img-sample-mock" style="background:#0D0D0D;">
+            <div style="position:absolute;inset:14px;display:flex;flex-direction:column;gap:6px;justify-content:center;">
+              <div style="font-family:var(--font-mono);font-size:8px;color:var(--primary);letter-spacing:0.18em;text-transform:uppercase;font-weight:600;">FIELD NOTES · 04 / 12</div>
+              <div style="font-size:22px;font-weight:800;letter-spacing:-0.03em;line-height:0.98;">What 112,000<br>ad launches taught us<br>about the auction.</div>
+              <div style="font-family:var(--font-mono);font-size:9px;color:rgba(255,255,255,0.55);letter-spacing:0.04em;margin-top:6px;line-height:1.5;">Performance Lead · 7 min read · May 2026</div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Headline does the work.</div>
+          <div class="img-sample-note">No hero image. Type at scale. Eyebrow + headline + byline. The article is the visual.</div>
+        </div>
+
+        <!-- Blog 02 · OG card · DARK 1200x630 -->
+        <div class="img-sample" style="background:var(--paper);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">02</span>
+            <span>OG CARD · 1200 × 630</span>
+          </div>
+          <div class="img-sample-mock" style="background:#0D0D0D;aspect-ratio:1200/630;">
+            <div style="position:absolute;inset:0;">
+              <svg width="180" height="144" viewBox="0 0 128 102" style="position:absolute;bottom:-30px;right:-20px;opacity:0.06;color:var(--paper);"><use href="#ff-mark"/></svg>
+            </div>
+            <div style="position:absolute;inset:14px;display:flex;flex-direction:column;justify-content:space-between;">
+              <div style="font-family:var(--font-mono);font-size:8px;color:var(--primary);letter-spacing:0.18em;font-weight:600;text-transform:uppercase;">FABFUNNEL · FIELD NOTES</div>
+              <div style="font-size:18px;font-weight:800;letter-spacing:-0.025em;line-height:1;color:var(--paper);">Six campaigns. <span style="color:var(--primary);">One click.</span></div>
+              <div style="display:flex;justify-content:space-between;align-items:end;font-family:var(--font-mono);font-size:7px;letter-spacing:0.1em;color:rgba(255,255,255,0.45);">
+                <span>fabfunnel.com/notes/bulk-launch</span>
+                <span>v 2.7</span>
+              </div>
+            </div>
+          </div>
+          <div class="img-sample-headline">OG card earns the share.</div>
+          <div class="img-sample-note">Mark watermark at 6%. Headline + URL only. Reads in feed without expanding.</div>
+        </div>
+
+        <!-- Blog 03 · Inline chart · LIGHT -->
+        <div class="img-sample" style="background:var(--paper);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">03</span>
+            <span>INLINE · CHART CROP</span>
+          </div>
+          <div class="img-sample-mock" style="background:var(--warm);">
+            <div style="position:absolute;inset:14px;background:white;border:1px solid var(--border);border-radius:4px;padding:12px;display:flex;flex-direction:column;gap:6px;">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                <div style="font-family:var(--font-mono);font-size:8px;color:var(--ink-4);letter-spacing:0.14em;text-transform:uppercase;">FIG 01 · ROAS BY PLATFORM · 30D</div>
+                <div style="font-family:var(--font-mono);font-size:8px;color:var(--primary-dark);font-weight:700;letter-spacing:0.04em;">+18.4%</div>
+              </div>
+              <svg width="100%" height="58" viewBox="0 0 200 58" preserveAspectRatio="none">
+                <polyline points="0,48 25,44 50,40 75,32 100,34 125,24 150,20 175,16 200,8" fill="none" stroke="#8FB821" stroke-width="2"/>
+                <polyline points="0,48 25,44 50,40 75,32 100,34 125,24 150,20 175,16 200,8 200,58 0,58" fill="rgba(195,235,66,0.2)" stroke="none"/>
+              </svg>
+              <div style="display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:7px;color:var(--ink-4);letter-spacing:0.06em;">
+                <span>D-30</span><span>D-15</span><span>TODAY</span>
+              </div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Data figures, captioned.</div>
+          <div class="img-sample-note">Lime stroke, 2px, area fill at 20%. Always with a figure number and a one-line caption.</div>
+        </div>
+
+        <!-- Blog 04 · Pull-quote band · CREAM -->
+        <div class="img-sample" style="background:var(--warm);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">04</span>
+            <span>PULL QUOTE · CREAM</span>
+          </div>
+          <div class="img-sample-mock" style="background:#F0EFE8;">
+            <div style="position:absolute;inset:14px;display:flex;align-items:center;gap:14px;">
+              <div style="font-size:56px;color:var(--primary-dark);font-weight:800;line-height:0.4;letter-spacing:-0.02em;flex-shrink:0;">"</div>
+              <div style="font-size:16px;font-weight:700;letter-spacing:-0.018em;line-height:1.25;color:var(--ink);">Stop rebuilding the same campaign <span style="background:var(--primary);">ten times</span>.</div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Pull-quote, in line.</div>
+          <div class="img-sample-note">Big quote-mark in Rich. Six-to-twelve words. Green highlight on the operator-language phrase.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">05 · Imagery · Blogs</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 21 · IMAGERY · AD CREATIVES -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="19 Imagery ad creatives">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 05 · AESTHETIC</div>
+    <div class="head-right counter">19 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">05 · Aesthetic · Imagery 03 / 03</div>
+      <h2 class="l3-title">Creatives for ads.</h2>
+      <p class="l3-purpose">One benefit per ad. One number. One CTA. Same engine that generates customer creative, eats its own dog food.</p>
+      <div class="l3-meta">
+        Formats · 1:1 · 9:16 · 1.91:1<br>
+        Treatment · product hero<br>
+        Number · ROAS · spend · time<br>
+        CTA · primary green pill
+      </div>
+    </div>
+    <div class="l3-canvas">
+      <div style="display:grid;grid-template-columns:1fr 1fr 1.6fr;gap:18px;flex:1;min-height:0;align-items:stretch;">
+        <!-- Ad 01 · Meta feed 1:1 -->
+        <div class="img-sample" style="background:var(--paper);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">01</span>
+            <span>META FEED · 1:1</span>
+          </div>
+          <div class="img-sample-mock" style="background:#0D0D0D;aspect-ratio:1;">
+            <div style="position:absolute;inset:0;background:linear-gradient(180deg,#0D0D0D 0%,#1A1A1A 100%);"></div>
+            <div style="position:absolute;inset:14px;display:flex;flex-direction:column;justify-content:space-between;color:white;">
+              <div style="font-family:var(--font-mono);font-size:8px;color:var(--primary);letter-spacing:0.16em;text-transform:uppercase;font-weight:600;">BULK LAUNCH</div>
+              <div style="font-size:24px;font-weight:800;letter-spacing:-0.028em;line-height:0.95;">Launch <span style="color:var(--primary);">112 ads</span> in 6 minutes.</div>
+              <div style="display:flex;align-items:center;justify-content:space-between;">
+                <div style="font-family:var(--font-mono);font-size:7px;color:rgba(255,255,255,0.55);letter-spacing:0.06em;">FABFUNNEL.COM</div>
+                <div style="background:var(--primary);color:var(--ink);padding:5px 10px;border-radius:999px;font-size:9px;font-weight:700;letter-spacing:-0.01em;">Try free →</div>
+              </div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Number leads.</div>
+          <div class="img-sample-note">Hero number in lime. CTA pill stays small — the claim is the ad.</div>
+        </div>
+
+        <!-- Ad 02 · TikTok 9:16 -->
+        <div class="img-sample" style="background:var(--paper);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">02</span>
+            <span>TIKTOK / REELS · 9:16</span>
+          </div>
+          <div class="img-sample-mock" style="background:#0D0D0D;aspect-ratio:9/16;max-height:100%;">
+            <div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(195,235,66,0.18) 0%, transparent 55%),#0D0D0D;"></div>
+            <div style="position:absolute;inset:10px;display:flex;flex-direction:column;justify-content:space-between;color:white;">
+              <div style="font-family:var(--font-mono);font-size:7px;color:var(--primary);letter-spacing:0.16em;text-transform:uppercase;font-weight:600;">CREATIVE · GENIE</div>
+              <div>
+                <div style="font-size:14px;font-weight:800;letter-spacing:-0.022em;line-height:1.0;">Four hero shots.</div>
+                <div style="font-size:14px;font-weight:800;letter-spacing:-0.022em;line-height:1.0;color:var(--primary);">One brief.</div>
+                <div style="font-size:14px;font-weight:800;letter-spacing:-0.022em;line-height:1.0;">Zero waiting.</div>
+              </div>
+              <div style="display:flex;flex-direction:column;gap:5px;">
+                <div style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:3px;height:36px;display:grid;grid-template-columns:repeat(4,1fr);padding:4px;gap:3px;">
+                  <div style="background:#3a4b3a;border-radius:1px;border:1px solid rgba(195,235,66,0.4);"></div>
+                  <div style="background:#4a5b5e;border-radius:1px;"></div>
+                  <div style="background:#5a4a3e;border-radius:1px;"></div>
+                  <div style="background:#3e4a5a;border-radius:1px;"></div>
+                </div>
+                <div style="background:var(--primary);color:var(--ink);padding:5px 10px;border-radius:999px;font-size:9px;font-weight:700;text-align:center;letter-spacing:-0.01em;">Generate yours →</div>
+              </div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Vertical, stacked.</div>
+          <div class="img-sample-note">Three short lines. Middle line carries the green. Output preview sits above the CTA.</div>
+        </div>
+
+        <!-- Ad 03 · NewsBreak / Display 1.91:1 + Variations -->
+        <div class="img-sample" style="background:var(--paper);color:var(--ink);">
+          <div class="img-sample-meta">
+            <span class="img-sample-num">03</span>
+            <span>DISPLAY / NEWSBREAK · 1.91:1</span>
+          </div>
+          <div class="img-sample-mock" style="background:var(--warm);aspect-ratio:1.91/1;">
+            <div style="position:absolute;inset:14px;background:white;border:1px solid var(--border);border-radius:4px;padding:10px;display:flex;gap:10px;">
+              <div style="width:42%;display:flex;flex-direction:column;justify-content:space-between;">
+                <div>
+                  <div style="font-family:var(--font-mono);font-size:7px;color:var(--ink-4);letter-spacing:0.14em;text-transform:uppercase;">FOR ECOM BRANDS</div>
+                  <div style="font-size:13px;font-weight:800;letter-spacing:-0.018em;line-height:1.05;margin-top:4px;">ROAS up <span style="background:var(--primary);">17.3%</span> in 30 days.</div>
+                </div>
+                <div style="background:var(--ink);color:var(--paper);padding:5px 10px;border-radius:999px;font-size:9px;font-weight:600;align-self:flex-start;letter-spacing:-0.01em;">See how →</div>
+              </div>
+              <div style="flex:1;background:var(--warm);border-radius:3px;border:1px solid var(--border);position:relative;padding:6px;display:flex;flex-direction:column;gap:3px;">
+                <div style="font-family:var(--font-mono);font-size:5px;color:var(--ink-4);letter-spacing:0.1em;">DASHBOARD · MAY</div>
+                <svg width="100%" height="46" viewBox="0 0 100 46" preserveAspectRatio="none"><polyline points="0,40 12,36 24,38 36,28 48,30 60,20 72,22 84,14 100,8" fill="none" stroke="#8FB821" stroke-width="1.5"/></svg>
+              </div>
+            </div>
+          </div>
+          <div class="img-sample-headline">Outcome + proof.</div>
+          <div class="img-sample-note">Number on the left, screenshot on the right. Display formats earn the click by showing the work.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">05 · Imagery · Ad creatives</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 20 · DEPTH WITHOUT ORNAMENT -->
+<!-- ================================================================= -->
+<section class="l3" data-screen-label="20 Depth without ornament">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 05 · AESTHETIC</div>
+    <div class="head-right counter">20 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">05 · Aesthetic extensions</div>
+      <h2 class="l3-title">Depth without ornament.</h2>
+      <p class="l3-purpose">Layered surfaces and thin borders carry the third dimension. No gradients. No glow. No noise.</p>
+      <div class="l3-meta">
+        Layer 1 · canvas warm<br>
+        Layer 2 · paper card<br>
+        Layer 3 · soft lift shadow<br>
+        Borders · 1px solid · always
+      </div>
+    </div>
+    <div class="l3-canvas">
+      <div class="surface-stack">
+        <div class="surface-demo surface-flat">
+          <div class="surface-label">BEFORE · FLAT</div>
+          <div class="surface-card" style="margin-top:auto;">
+            <div class="surface-card-title">Bulk launch ready</div>
+            <div class="surface-card-text" style="margin-top:8px;">112 campaigns queued across 3 accounts. Estimated runtime · 8 min.</div>
+            <div style="margin-top:14px;display:flex;gap:8px;">
+              <span class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Run all</span>
+              <span class="btn btn-secondary" style="font-size:12px;padding:8px 16px;">Review</span>
+            </div>
+          </div>
+          <div class="spec-line" style="font-size:11px;margin-top:auto;">Same paper. No relationship between layers. Reads as a single sheet.</div>
+        </div>
+        <div class="surface-demo surface-layered">
+          <div class="surface-label" style="color:var(--primary-dark);">AFTER · LAYERED</div>
+          <div class="surface-card" style="margin-top:auto;">
+            <div class="surface-card-title">Bulk launch ready</div>
+            <div class="surface-card-text" style="margin-top:8px;">112 campaigns queued across 3 accounts. Estimated runtime · 8 min.</div>
+            <div style="margin-top:14px;display:flex;gap:8px;">
+              <span class="btn btn-primary" style="font-size:12px;padding:8px 16px;">Run all</span>
+              <span class="btn btn-secondary" style="font-size:12px;padding:8px 16px;">Review</span>
+            </div>
+          </div>
+          <div class="spec-line" style="font-size:11px;margin-top:auto;color:var(--ink-3);">Canvas warm, card paper, 1px line, 16/32 outer shadow. Three layers, no decoration.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">05 · Depth</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 21 · MOTION (DARK) -->
+<!-- ================================================================= -->
+<section class="dark l3" data-screen-label="21 Motion principles">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 05 · AESTHETIC</div>
+    <div class="head-right counter">21 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l3-label">
+      <div class="l3-section">05 · Aesthetic extensions</div>
+      <h2 class="l3-title">Motion principles.</h2>
+      <p class="l3-purpose">Ease-out. Slow. Intentional. Motion is utility, not delight-bait. The most important thing on a screen earns the only animated moment.</p>
+      <div class="l3-meta">
+        Default · 120–200ms<br>
+        Page · 320ms<br>
+        Curve · 0.22, 1, 0.36, 1<br>
+        Never · spring · overshoot
+      </div>
+    </div>
+    <div class="l3-canvas">
+      <div class="motion-frames">
+        <div class="motion-frame">
+          <div class="motion-frame-num">PRINCIPLE 01</div>
+          <div class="motion-frame-title">Settle, don't bounce.</div>
+          <div class="motion-frame-curve">
+            <svg width="100%" height="100%" viewBox="0 0 200 80" preserveAspectRatio="none">
+              <line x1="0" y1="78" x2="200" y2="78" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+              <path d="M0,78 C40,78 60,4 200,4" fill="none" stroke="#C3EB42" stroke-width="2"/>
+              <circle cx="200" cy="4" r="5" fill="#C3EB42"/>
+            </svg>
+          </div>
+          <div class="motion-frame-spec">cubic-bezier(0.22, 1, 0.36, 1)<br>ease-out · no overshoot</div>
+        </div>
+        <div class="motion-frame">
+          <div class="motion-frame-num">PRINCIPLE 02</div>
+          <div class="motion-frame-title">Staggered reveal.</div>
+          <div class="motion-frame-curve" style="display:flex;align-items:end;gap:6px;">
+            <div style="flex:1;height:30%;background:rgba(255,255,255,0.2);border-radius:2px;"></div>
+            <div style="flex:1;height:50%;background:rgba(255,255,255,0.35);border-radius:2px;"></div>
+            <div style="flex:1;height:70%;background:rgba(255,255,255,0.55);border-radius:2px;"></div>
+            <div style="flex:1;height:85%;background:rgba(195,235,66,0.85);border-radius:2px;"></div>
+            <div style="flex:1;height:100%;background:#C3EB42;border-radius:2px;"></div>
+          </div>
+          <div class="motion-frame-spec">40ms offset per element<br>orchestrated, not scattered</div>
+        </div>
+        <div class="motion-frame">
+          <div class="motion-frame-num">PRINCIPLE 03</div>
+          <div class="motion-frame-title">Accent pulse on data.</div>
+          <div class="motion-frame-curve" style="display:flex;align-items:center;justify-content:center;">
+            <div style="width:60px;height:60px;border-radius:50%;background:#C3EB42;position:relative;">
+              <div style="position:absolute;inset:-12px;border-radius:50%;border:2px solid #C3EB42;opacity:0.4;"></div>
+              <div style="position:absolute;inset:-24px;border-radius:50%;border:2px solid #C3EB42;opacity:0.15;"></div>
+            </div>
+          </div>
+          <div class="motion-frame-spec">500ms · once on update<br>earns attention, doesn't demand it</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark-dark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline" style="color:var(--primary);">05 · Motion</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 22 · ANTI-REFERENCES -->
+<!-- ================================================================= -->
+<section class="l5" data-screen-label="22 Anti-references">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 05 · AESTHETIC</div>
+    <div class="head-right counter">22 / <strong>24</strong></div>
+  </div>
+  <div class="body">
+    <div class="l5-head">
+      <div>
+        <div class="l5-section">05 · Aesthetic extensions</div>
+        <h2 class="l5-title">What FabFunnel is <em style="font-style:normal;color:var(--primary-dark);">not</em>.</h2>
+      </div>
+      <div class="mono-tag" style="text-align:right;line-height:1.8;">The guardrails matter as much as the direction.<br>Skip this and every freelancer drifts to the safe middle.</div>
+    </div>
+    <div class="l5-cols">
+      <div class="l5-col use">
+        <div class="l5-col-head">
+          <span class="l5-col-label">IS</span>
+          <span class="l5-col-tick">✓</span>
+        </div>
+        <div class="l5-tiles" style="grid-template-rows:1fr 1fr 1fr;grid-template-columns:1fr;">
+          <div class="l5-tile">
+            <div class="l5-tile-img" style="background:var(--ink);color:var(--primary);min-height:60px;font-size:20px;font-family:var(--font-sans);font-weight:800;letter-spacing:-0.02em;text-transform:none;">Win the auction.</div>
+            <div class="l5-tile-label">Dev-tool register · operator voice</div>
+          </div>
+          <div class="l5-tile">
+            <div class="l5-tile-img" style="background:var(--warm-2);color:var(--ink-3);min-height:60px;">
+              <div style="font-family:var(--font-mono);font-size:14px;text-transform:none;letter-spacing:0;">ROAS 4.2× · CPA $12.40 · CTR 3.1%</div>
+            </div>
+            <div class="l5-tile-label">Numbers shown plainly</div>
+          </div>
+          <div class="l5-tile">
+            <div class="l5-tile-img" style="background:var(--paper);min-height:60px;display:flex;flex-direction:column;align-items:flex-start;padding:14px;gap:6px;text-transform:none;">
+              <div style="height:6px;width:60%;background:var(--ink);border-radius:1px;"></div>
+              <div style="height:6px;width:40%;background:var(--ink-4);border-radius:1px;"></div>
+              <div style="height:24px;width:80px;background:var(--primary);border-radius:14px;margin-top:6px;"></div>
+            </div>
+            <div class="l5-tile-label">Single accent moment per screen</div>
+          </div>
+        </div>
+      </div>
+      <div class="l5-col avoid">
+        <div class="l5-col-head">
+          <span class="l5-col-label">IS NOT</span>
+          <span class="l5-col-tick">✗</span>
+        </div>
+        <div class="l5-tiles" style="grid-template-rows:1fr 1fr;grid-template-columns:1fr 1fr;">
+          <div class="l5-tile">
+            <div class="l5-tile-img" style="background:linear-gradient(135deg,#A855F7,#EC4899,#3B82F6);min-height:0;"></div>
+            <div class="l5-tile-label">Purple/pink mesh AI</div>
+            <div class="l5-tile-why">Every Series A SaaS uses this. We are not them.</div>
+          </div>
+          <div class="l5-tile">
+            <div class="l5-tile-img" style="background:#FFE9D6;min-height:0;display:flex;align-items:center;justify-content:center;">
+              <div style="font-size:28px;">👥💼</div>
+            </div>
+            <div class="l5-tile-label">Stock corporate photos</div>
+            <div class="l5-tile-why">Operators don't believe diverse-team-pointing-at-laptop.</div>
+          </div>
+          <div class="l5-tile">
+            <div class="l5-tile-img" style="background:#0A0028;min-height:0;position:relative;">
+              <div style="position:absolute;inset:0;background:radial-gradient(circle at 30% 50%, #FF00C8 0%, transparent 50%), radial-gradient(circle at 70% 50%, #00FFFF 0%, transparent 50%);opacity:0.7;"></div>
+            </div>
+            <div class="l5-tile-label">Neon cyberpunk</div>
+            <div class="l5-tile-why">Aesthetics over data. Reverse of who we serve.</div>
+          </div>
+          <div class="l5-tile">
+            <div class="l5-tile-img" style="background:rgba(195,235,66,0.2);backdrop-filter:blur(8px);min-height:0;position:relative;">
+              <div style="position:absolute;inset:16px;background:rgba(255,255,255,0.3);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.4);border-radius:8px;"></div>
+            </div>
+            <div class="l5-tile-label">Glassmorphism everywhere</div>
+            <div class="l5-tile-why">2021 called. Density &gt; transparency.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">05 · Anti-references</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 23 · BRAND ESSENCE WRAP (DARK) -->
+<!-- ================================================================= -->
+<section class="dark l2" data-screen-label="23 Brand essence wrap">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 06 · CLOSE</div>
+    <div class="head-right counter">23 / <strong>24</strong></div>
+  </div>
+  <div class="body" style="grid-template-columns: 1fr 380px;">
+    <div class="l2-main">
+      <div class="l2-eyebrow">Win Everywhere</div>
+      <h2 class="l2-heading" style="font-size:128px;letter-spacing:-0.035em;max-width:14ch;">FabFunnel is the<br>operating system<br>for paid ads.</h2>
+      <p class="l2-body" style="font-size:21px;max-width:48ch;">Generate creative variations. Launch campaigns in bulk. Route budget toward the winners. FabFunnel runs the full ad cycle so your operators can focus on strategy, not spreadsheets.</p>
+      <div class="hash-row">
+        <span class="hash">#Performance</span>
+        <span class="hash">#Automation</span>
+        <span class="hash">#Growth</span>
+        <span class="hash">#Insights</span>
+      </div>
+    </div>
+    <div class="l2-aside" style="align-self:center;align-items:flex-start;border-left-color:rgba(255,255,255,0.12);">
+      <svg width="120" height="96" viewBox="0 0 128 102" style="margin-bottom:8px;"><use href="#ff-mark-dark"/></svg>
+      <div style="font-family:var(--font-sans);font-weight:800;font-size:32px;letter-spacing:-0.02em;line-height:1;">Fab<span style="font-weight:500;color:var(--primary);">Funnel</span></div>
+      <div style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-top:4px;">OS for paid ads</div>
+      <div class="divider-soft" style="background:rgba(255,255,255,0.12);margin:32px 0 8px;width:100%;"></div>
+      <div style="font-family:var(--font-mono);font-size:12px;color:rgba(255,255,255,0.55);line-height:1.8;letter-spacing:0.02em;">
+        Built for operators<br>
+        running the cycle<br>
+        at 2 a.m.
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark-dark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline" style="color:var(--primary);">Create · Launch · Scale · Automate · Win Everywhere</div>
+  </div>
+</section>
+
+<!-- ================================================================= -->
+<!-- SLIDE 24 · ENDNOTES -->
+<!-- ================================================================= -->
+<section class="l1" data-screen-label="24 Endnotes">
+  <div class="head">
+    <div class="head-left"><span class="head-dot"></span> 06 · CLOSE</div>
+    <div class="head-right counter">24 / <strong>24</strong></div>
+  </div>
+  <div class="body" style="gap:48px;">
+    <svg width="80" height="64" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+    <div style="display:flex;flex-direction:column;align-items:center;gap:12px;">
+      <div class="micro">END · NOTES</div>
+      <h2 style="font-size:64px;font-weight:700;letter-spacing:-0.03em;line-height:1;">Built on the FabFunnel<br>Master Brand Guidelines.</h2>
+    </div>
+    <div style="background:var(--paper);border:1px solid var(--border-2);border-radius:12px;padding:32px 48px;display:grid;grid-template-columns:repeat(4,auto);gap:48px;font-family:var(--font-mono);font-size:13px;">
+      <div>
+        <div style="font-size:10px;letter-spacing:0.2em;color:var(--ink-4);text-transform:uppercase;margin-bottom:6px;">VERSION</div>
+        <div style="font-weight:600;color:var(--ink);">v1.0</div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:0.2em;color:var(--ink-4);text-transform:uppercase;margin-bottom:6px;">OWNER</div>
+        <div style="font-weight:600;color:var(--ink);">Aabhas</div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:0.2em;color:var(--ink-4);text-transform:uppercase;margin-bottom:6px;">UPDATED</div>
+        <div style="font-weight:600;color:var(--ink);">19 May 2026</div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:0.2em;color:var(--ink-4);text-transform:uppercase;margin-bottom:6px;">SOURCE</div>
+        <div style="font-weight:600;color:var(--ink);">FabFunnel Master Brand Guidelines</div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;gap:14px;font-family:var(--font-mono);font-size:12px;color:var(--ink-4);letter-spacing:0.1em;text-transform:uppercase;">
+      <span>For questions and approvals · contact Aabhas</span>
+      <span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--primary);"></span>
+    </div>
+  </div>
+  <div class="foot">
+    <div class="foot-mark">
+      <svg class="mk" viewBox="0 0 128 102"><use href="#ff-mark"/></svg>
+      <span class="wm">Fab<em>Funnel</em></span>
+    </div>
+    <div class="foot-tagline">End of moodboard · 24 / 24</div>
+  </div>
+</section>
+
+</deck-stage>
+
+<script src="deck-stage.js"></script>
+
+</body>
+</html>
