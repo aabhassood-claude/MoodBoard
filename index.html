@@ -16,7 +16,7 @@
   --primary: #C3EB42;
   --primary-deep: #A8D632;
   --primary-dark: #8FB821;
-  --ink: #0D0D0D;
+  --ink: #171717;
   --ink-2: #1A1A1A;
   --ink-3: #404040;
   --ink-4: #6E6E6E;
@@ -455,7 +455,7 @@ deck-stage > section.cream { background: var(--warm); }
   min-height: 0;
   overflow: hidden;
 }
-.img-sample[style*="#0D0D0D"] { border-color: var(--border-dark); }
+.img-sample[style*="#0D0D0D"], .img-sample[style*="#171717"] { border-color: var(--border-dark); }
 .img-sample-meta {
   font-family: var(--font-mono);
   font-size: 10px;
@@ -493,7 +493,8 @@ deck-stage > section.cream { background: var(--warm); }
   background: linear-gradient(180deg, transparent 60%, var(--primary) 60%);
   padding: 0 2px;
 }
-.img-sample[style*="#0D0D0D"] .img-sample-headline em {
+.img-sample[style*="#0D0D0D"] .img-sample-headline em,
+.img-sample[style*="#171717"] .img-sample-headline em {
   background: linear-gradient(180deg, transparent 60%, var(--primary) 60%);
   color: var(--ink);
 }
@@ -1191,11 +1192,11 @@ deck-stage { background: #0a0a0a; }
 <!-- Reusable inline SVGs -->
 <svg style="display:none" aria-hidden="true">
   <symbol id="ff-mark" viewBox="0 0 128 102">
-    <path d="M127.882 4.84577C127.882 6.0199 127.464 7.09453 126.768 7.93035L104.23 34.9453C104.151 35.0547 104.121 35.0746 104.111 35.0945C103.225 36.1294 101.902 36.796 100.419 36.796H44.8571L20.6183 8.5373L23.7625 4.85573L24.1307 4.4378C26.5088 1.62188 30.0014 0 33.6829 0H123.026C125.713 0 127.882 2.16916 127.882 4.85573Z" fill="#0D0D0D"/>
+    <path d="M127.882 4.84577C127.882 6.0199 127.464 7.09453 126.768 7.93035L104.23 34.9453C104.151 35.0547 104.121 35.0746 104.111 35.0945C103.225 36.1294 101.902 36.796 100.419 36.796H44.8571L20.6183 8.5373L23.7625 4.85573L24.1307 4.4378C26.5088 1.62188 30.0014 0 33.6829 0H123.026C125.713 0 127.882 2.16916 127.882 4.85573Z" fill="#171717"/>
     <path d="M49.4939 98.6169L47.683 100.746C47.0063 101.542 46.0013 102 44.9566 102H8.66802C5.99141 102 3.8123 99.8309 3.8123 97.1542C3.8123 95.9801 4.23021 94.9054 4.91678 94.0696L25.2352 70.388L49.4839 98.6069Z" fill="#C3EB42"/>
     <path d="M83.663 58.8557L49.4939 98.6169L3.4939 45.0647C2.68793 44.1094 2.59837 43.9901 2.51876 43.8707C0.429211 40.9552 2.48892 36.786 6.23022 36.796H44.867L63.7327 58.7264C68.9964 64.8458 78.3794 64.8756 83.663 58.8557Z" fill="#A8D632"/>
     <path d="M44.8571 36.786H6.22025C2.48891 36.786 0.429215 40.9652 2.50882 43.8707C-0.914068 39.612 -0.834461 33.5025 2.74763 29.3333L8.88693 22.1692L20.6183 8.52737L44.8571 36.786Z" fill="#C3EB42"/>
-    <path d="M87.9018 52.1492C87.9018 53.3234 87.4839 54.398 86.7874 55.2338L83.7824 58.7363C78.3496 64.8855 68.9665 64.8557 63.7128 58.7363L53.8819 47.3035H83.0362C85.7228 47.3035 87.8919 49.4726 87.8919 52.1592Z" fill="#0D0D0D"/>
+    <path d="M87.9018 52.1492C87.9018 53.3234 87.4839 54.398 86.7874 55.2338L83.7824 58.7363C78.3496 64.8855 68.9665 64.8557 63.7128 58.7363L53.8819 47.3035H83.0362C85.7228 47.3035 87.8919 49.4726 87.8919 52.1592Z" fill="#171717"/>
     <path d="M87.9018 52.1492C87.9018 53.3234 87.4839 54.398 86.7874 55.2338L83.7824 58.7363C78.3496 64.8855 68.9665 64.8557 63.7128 58.7363L53.8819 47.3035H83.0362C85.7228 47.3035 87.8919 49.4726 87.8919 52.1592Z" fill="#C3EB42"/>
   </symbol>
   <symbol id="ff-mark-dark" viewBox="0 0 128 102">
@@ -1338,11 +1339,11 @@ deck-stage { background: #0a0a0a; }
           </div>
         </div>
         <div class="swatch">
-          <div class="swatch-color" style="background: #0D0D0D;"></div>
+          <div class="swatch-color" style="background: #171717;"></div>
           <div class="swatch-meta">
-            <div class="swatch-hex">#0D0D0D</div>
-            <div class="swatch-name">Deep Black</div>
-            <div class="swatch-role">Dark surfaces · sidebar</div>
+            <div class="swatch-hex">#171717</div>
+            <div class="swatch-name">Ink</div>
+            <div class="swatch-role">Primary text · dark surfaces · sidebar</div>
           </div>
         </div>
         <div class="swatch">
@@ -1466,7 +1467,7 @@ deck-stage { background: #0a0a0a; }
             </div>
           </div>
           <div class="l5-tile" style="flex-direction:row;align-items:center;">
-            <div class="l5-tile-img" style="background:#0D0D0D;flex:0 0 80px;height:80px;min-height:0;"><span style="color:#C3EB42;font-size:18px;">!</span></div>
+            <div class="l5-tile-img" style="background:#171717;flex:0 0 80px;height:80px;min-height:0;"><span style="color:#C3EB42;font-size:18px;">!</span></div>
             <div style="flex:1;">
               <div class="l5-tile-label">Stacked greens (Lime + Soft)</div>
               <div class="l5-tile-why">Soft Green #A8D632 lives <em style="font-style:normal;color:var(--ink-2);">inside the mark only.</em> Never in UI, type, or surfaces.</div>
